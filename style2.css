@@ -18,7 +18,7 @@ body {
 }
 
 .header {
-    background-color: rgb(153, 217, 234); /*暫定*/
+    background-color: black; /*暫定*/
     text-align: center;
 }
 
@@ -26,8 +26,10 @@ body {
     font-family: "Noto Sans TC", sans-serif;
     font-size: 3em; /*48px*/
     letter-spacing: 0.45em; /*7.2px*/
+    color: white;
 
     padding: 39px 0;
+    margin-left: 7.2px; /*對齊用*/
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -36,7 +38,7 @@ body {
     display: flex;
     justify-content: center;
 
-    margin: 99px 115px;
+    margin: 138px 115px 121px 115px;
 }
 
 .main-image {
@@ -48,12 +50,14 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .main-content-result {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 2em; /*32px*/
     line-height: 1.5;
+    text-align: center;
 
     margin-top: 0;
     margin-bottom: 0;
@@ -74,4 +78,44 @@ body {
 .main-content-bless-image {
     display: block;
     margin-left: 4px;
+}
+
+.button {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2em; /*32px*/
+    
+    display: flex;
+    justify-content: center;
+    
+}
+
+.button-content {
+    margin: 0;
+}
+
+.button-content-link {
+    text-decoration: none;
+    color: black; /*暫定*/
+    padding: 22px 88px;
+    padding-top: 18px; /*對齊用*/
+    background-image: url("images/back_button.png");
+    background-repeat: no-repeat;
+}
+
+/*按鈕的hover效果之後再做*/
+
+/*擅自加了個footer*/
+.footer {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+
+    margin-top: 107px;
+}
+
+.footer-content {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1em;
+    color: #d9d9d9;
+    margin: 21px 0;
 }
