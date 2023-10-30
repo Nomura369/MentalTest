@@ -1,0 +1,33 @@
+html {
+    /*background-color: #EDF2C5;*/
+    box-sizing: border-box; /*預設是cotent-box*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 100%; /*不知道有沒有必要，但還是寫一下*/
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /*滿版的高度*/
+}
+
+.header {
+    background-color: rgb(153, 217, 234); /*暫定*/
+    text-align: center;
+}
+
+.header-title {
+    font-family: "Noto Sans TC", sans-serif;
+    font-size: 3em; /*48px*/
+    letter-spacing: 0.45em; /*7.2px*/
+
+    padding: 39px 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
