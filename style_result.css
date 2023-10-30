@@ -15,6 +15,8 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh; /*滿版的高度*/
+
+    min-width: 1080px; /*畫面縮小後東西比較不會擠在一起*/
 }
 
 .header {
@@ -39,6 +41,10 @@ body {
     justify-content: center;
 
     margin: 99px 115px 121px 115px;
+
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-image {
@@ -96,17 +102,17 @@ body {
 .button-content-link {
     text-decoration: none;
     color: black; /*暫定*/
-    padding: 22px 88px;
-    padding-top: -4px; /*對齊用*/
+    padding: 18px 88px 22px 88px; /*top為對齊用*/
+
     background-image: url("images/back_button.png");
     background-repeat: no-repeat;
 }
 
 /*按鈕的hover效果之後再做*/
 
-/*擅自加了個footer*/
+/*擅自加了footer*/
 .footer {
-    background-color: black;
+    background-color: black; /*暫定*/
     display: flex;
     justify-content: center;
 
@@ -116,6 +122,6 @@ body {
 .footer-content {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1em;
-    color: #d9d9d9;
+    color: #d9d9d9; /*暫定*/
     margin: 21px 0;
 }
