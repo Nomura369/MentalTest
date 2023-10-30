@@ -33,17 +33,45 @@ body {
 }
 
 .main {
+    display: flex;
+    justify-content: center;
 
+    margin: 99px 115px;
+}
+
+.main-image {
+    display: block;
+    margin-right: 111px;
 }
 
 .main-content {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .main-content-result {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2em; /*32px*/
+    line-height: 1.5;
 
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .main-content-bless {
-    
+    display: flex;
+}
+
+.main-content-bless-word {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.5em; /*324px*/
+
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.main-content-bless-image {
+    display: block;
+    margin-left: 4px;
 }
