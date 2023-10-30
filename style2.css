@@ -38,7 +38,7 @@ body {
     display: flex;
     justify-content: center;
 
-    margin: 138px 115px 121px 115px;
+    margin: 99px 115px 121px 115px;
 }
 
 .main-image {
@@ -97,7 +97,7 @@ body {
     text-decoration: none;
     color: black; /*暫定*/
     padding: 22px 88px;
-    padding-top: 18px; /*對齊用*/
+    padding-top: -4px; /*對齊用*/
     background-image: url("images/back_button.png");
     background-repeat: no-repeat;
 }
