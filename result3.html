@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>你的聖誕角色是</title>
+        <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+        <link href="style_result.css" rel="stylesheet">
+        <!--與其它結果引入同個css，不一樣的地方直接在html改-->
+        <!--以下為字體引入區(NotoSans-Regular)-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+        <!--js與jQuery引入區-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="script_result.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                <p class="header-title">測驗結果</p>
+            </header>
+
+            <article class="main">
+                <img class="main-image" src="images/reindeer.png" alt="馴鹿">
+                <div class="main-content">
+                    <p class="main-content-result">你的聖誕角色是【馴鹿】！<br><br>
+                        你是一個務實、有準則的人，茶會上的點心與飲品甚至是餐桌桌巾，各個都是你精挑細選的。你習慣鉅細靡遺地規畫好每件事，是聖誕老公公的得力助手！</p>
+                    <div class="main-content-bless">
+                        <p class="main-content-bless-word">結果僅供參考，感謝您的參與！祝您有個美好的平安夜</p>
+                        <img class="main-content-bless-image" src="images/emoji.png" alt="微笑">
+                    </div>
+                </div>
+            </article>
+            
+            <!--按鈕放在<article>外面喔-->
+            <div class="button">
+                <p class="button-content">
+                    <a class="button-content-link" href="index.html">返回測驗</a>
+                </p>
+            </div>
+
+            <footer class="footer">
+                <!--內容為暫定-->
+                <p class="footer-content">&copy;copyright</p>
+            </footer>
+        </div>
+    </body>
+</html>
