@@ -1,0 +1,97 @@
+html {
+    /*background-color: #EDF2C5;*/
+    box-sizing: border-box; /*預設是cotent-box*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 100%; /*不知道有沒有必要，但還是寫一下*/
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh; /*滿版的高度*/
+
+    min-width: 1080px; /*畫面縮小後東西比較不會擠在一起*/
+}
+
+.header {
+
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 66px 145px;
+    
+    flex-grow: 1;
+}
+
+.main-scene {
+    margin-right: 90px;
+}
+
+.main-scene-image {
+    display: block;
+    box-shadow: 0 3px 5px #d9d9d9; /*暫定*/
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content-topic {
+    font-family: 'Noto Sans TC', sans-serif;
+    color: black;
+    font-size: 1.75em; /*28px*/
+    line-height: 1.5;
+    margin: 0 0 20px 0;
+}
+
+.main-content-option{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content-option-link {
+    text-decoration: none;
+    text-align: center;
+
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.5625em; /*25px*/
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 50px;
+    color: black;
+
+    padding-top: 23px;
+    padding-bottom: 23px;
+
+    margin-top: 30px; /*按鈕間距*/
+
+}
+
+.main-content-option-link-caption {
+    text-decoration: none;
+    margin: 0;
+}
+
+.footer {
+    background-color: black; /*暫定*/
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1em;
+    color: #d9d9d9; /*暫定*/
+    margin: 21px 0;
+}
