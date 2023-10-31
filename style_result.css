@@ -109,7 +109,7 @@ body {
     color: black; /*暫定*/
     padding: 18px 88px 22px 88px; /*top為對齊用*/
 
-    background-image: url("images/back_button.png");
+    background-image: url("images/normal_button.png");
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -117,7 +117,7 @@ body {
 .button-content-link:hover {
     /*改變字體顏色和背景圖(暫定)*/
     color: white;
-    background-image: url("images/back_button_hover.png");
+    background-image: url("images/normal_button_hover.png");
     background-repeat: no-repeat;
     background-size: contain;
 }

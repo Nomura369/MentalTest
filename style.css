@@ -12,7 +12,12 @@ body {
 }
 
 .container {
-    /*從這開始*/
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh; /*滿版的高度*/
+
+    min-width: 1080px; /*畫面縮小後東西比較不會擠在一起*/
 }
 
 .header {
@@ -20,9 +25,64 @@ body {
 }
 
 .main {
+    display: none;
+    
+    /*以下移到js：
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1; /*可佔滿垂直剩餘的空間*/
+    
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 120px;
+    margin-bottom: 120px;
 
 }
 
-.footer {
+.main-image {
+    display: block;
+}
 
+.main-button {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 2em; /*32px*/
+
+    /*按鈕的位置*/
+    position: absolute;
+    margin-top: 397px; /*按鈕的對齊基準為整個網頁*/
+}
+
+.main-button-link {
+    text-decoration: none;
+    color: black; /*暫定*/
+    padding: 23px 88px 22px 80px; /*最後為對齊用*/
+
+    background-image: url("images/normal_button.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.main-button-link:hover {
+    /*改變字體顏色和背景圖(暫定)*/
+    color: white;
+    background-image: url("images/normal_button_hover.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.footer {
+    background-color: black; /*暫定*/
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1em;
+    color: #d9d9d9; /*暫定*/
+    margin: 21px 0;
 }
