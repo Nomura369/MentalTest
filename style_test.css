@@ -34,6 +34,8 @@ body {
 }
 
 .main-scene {
+    opacity: 0;
+    
     margin-right: 90px;
 }
 
@@ -43,6 +45,8 @@ body {
 }
 
 .main-content {
+    opacity: 0;
+    
     display: flex;
     flex-direction: column;
 }
@@ -78,8 +82,14 @@ body {
 
 }
 
+.main-content-option-link:hover {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 50px;
+    color: white;
+}
+
 .main-content-option-link-caption {
-    text-decoration: none;
     margin: 0;
 }
 

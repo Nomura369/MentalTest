@@ -25,9 +25,8 @@ body {
 }
 
 .main {
-    display: none;
+    opacity: 0;
     
-    /*以下移到js：
     display: flex;
     flex-direction: column;
     align-items: center;

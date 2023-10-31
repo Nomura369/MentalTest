@@ -38,11 +38,10 @@ body {
 }
 
 .main {
-    display: none;
+    opacity: 0;
 
-    /*以下移到js：
     display: flex;
-    justify-content: center;*/
+    justify-content: center;
 
     margin: 99px 150px 121px 150px;
 
