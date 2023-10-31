@@ -45,6 +45,7 @@ body {
 
 .main-image {
     display: block;
+    box-shadow: 0 3px 8px #292D34; /*暫定，如果不合適可以拿掉*/
 }
 
 .main-button {
