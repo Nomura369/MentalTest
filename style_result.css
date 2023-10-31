@@ -40,7 +40,8 @@ body {
 .main {
     display: none;
 
-    /*display: flex;
+    /*以下移到js：
+    display: flex;
     justify-content: center;*/
 
     margin: 99px 115px 121px 115px;

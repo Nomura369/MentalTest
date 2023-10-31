@@ -1,0 +1,28 @@
+html {
+    /*background-color: #EDF2C5;*/
+    box-sizing: border-box; /*預設是cotent-box*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 100%; /*不知道有沒有必要，但還是寫一下*/
+}
+
+.container {
+    /*從這開始*/
+}
+
+.header {
+
+}
+
+.main {
+
+}
+
+.footer {
+
+}
