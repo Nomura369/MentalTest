@@ -14,6 +14,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+
     height: 100vh; /*滿版的高度*/
 
     min-width: 1080px; /*畫面縮小後東西比較不會擠在一起*/
@@ -37,8 +38,10 @@ body {
 }
 
 .main {
-    display: flex;
-    justify-content: center;
+    display: none;
+
+    /*display: flex;
+    justify-content: center;*/
 
     margin: 99px 115px 121px 115px;
 
@@ -92,6 +95,7 @@ body {
     
     display: flex;
     justify-content: center;
+    flex-grow: 1; /*可佔滿垂直剩餘的空間*/
     
 }
 
@@ -106,11 +110,17 @@ body {
 
     background-image: url("images/back_button.png");
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
-/*按鈕的hover效果之後再做*/
+.button-content-link:hover {
+    /*改變字體顏色和背景圖(暫定)*/
+    color: white;
+    background-image: url("images/back_button_hover.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
-/*擅自加了footer*/
 .footer {
     background-color: black; /*暫定*/
     display: flex;
