@@ -1,6 +1,25 @@
 html {
-    /*background-color: #EDF2C5;*/
     box-sizing: border-box; /*預設是cotent-box*/
+}
+
+#background1 {
+    background-color: #A7A7A7;
+}
+
+#background2 {
+    background-color: #678176;
+}
+
+#background3 {
+    background-color: #9F8A7D;
+}
+
+#background4 {
+    background-color: #B9A672;
+}
+
+#background5 {
+    background-color: #946E67;
 }
 
 *, *:before, *:after {
@@ -21,7 +40,6 @@ body {
 }
 
 .header {
-    background-color: black; /*暫定*/
     text-align: center;
 }
 
@@ -35,6 +53,26 @@ body {
     margin-left: 7.2px; /*對齊用*/
     margin-top: 0;
     margin-bottom: 0;
+}
+
+#header1 {
+    background-color: #4B4A4A;
+}
+
+#header2 {
+    background-color: #41524B;
+}
+
+#header3 {
+    background-color: #4D433C;
+}
+
+#header4 {
+    background-color: #685C3A;
+}
+
+#header5 {
+    background-color: #60423C;
 }
 
 .main {
@@ -65,6 +103,8 @@ body {
     font-size: 2em; /*32px*/
     line-height: 1.5;
     text-align: center;
+    color: #4D433C;
+    font-weight: 700;
 
     margin-top: 0;
     margin-bottom: 0;
@@ -77,6 +117,8 @@ body {
 .main-content-bless-word {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.5em; /*324px*/
+    color: #67382D;
+    font-weight: 700;
 
     margin-top: 0;
     margin-bottom: 0;
@@ -103,19 +145,44 @@ body {
 
 .button-content-link {
     text-decoration: none;
-    color: black; /*暫定*/
+    color: white;
     padding: 18px 88px 22px 88px; /*top為對齊用*/
-
-    background-color: #d9d9d9;
-    border: 1px solid #d9d9d9;
-    border-radius: 50px;
 }
 
 .button-content-link:hover {
-    /*改變字體顏色和背景圖(暫定)*/
-    color: white;
-    background-color: black;
-    border: 1px solid black;
+    color: #1a1a1a;
+    background-color: #BAA292;
+    border: 1px solid #BAA292;
+    border-radius: 50px;
+}
+
+.btn1 {
+    background-color: #4B4A4A;
+    border: 1px solid #4B4A4A;
+    border-radius: 50px;
+}
+
+.btn2 {
+    background-color: #41524B;
+    border: 1px solid #41524B;
+    border-radius: 50px;
+}
+
+.btn3 {
+    background-color: #4D433C;
+    border: 1px solid #4D433C;
+    border-radius: 50px;
+}
+
+.btn4 {
+    background-color: #685C3A;
+    border: 1px solid #685C3A;
+    border-radius: 50px;
+}
+
+.btn5 {
+    background-color: #60423C;
+    border: 1px solid #60423C;
     border-radius: 50px;
 }
 

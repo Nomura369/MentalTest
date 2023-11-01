@@ -1,6 +1,13 @@
 html {
-    /*background-color: #EDF2C5;*/
     box-sizing: border-box; /*預設是cotent-box*/
+}
+
+#background1 {
+    background-color: #BAA292;
+}
+
+#background2 {
+    background-color: #9F8A7D;
 }
 
 *, *:before, *:after {
@@ -41,7 +48,7 @@ body {
 
 .main-scene-image {
     display: block;
-    box-shadow: 0 3px 5px #d9d9d9; /*暫定*/
+    box-shadow: 0 3px 5px #4D433C;
 }
 
 .main-content {
@@ -53,8 +60,9 @@ body {
 
 .main-content-topic {
     font-family: 'Noto Sans TC', sans-serif;
-    color: black;
+    color: #4D433C;
     font-size: 1.75em; /*28px*/
+    font-weight: 700;
     line-height: 1.5;
     margin: 0 0 20px 0;
 }
@@ -70,10 +78,10 @@ body {
 
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 1.5625em; /*25px*/
-    background-color: #d9d9d9;
-    border: 1px solid #d9d9d9;
+    background-color: #4D433C;
+    border: 1px solid #4D433C;
     border-radius: 50px;
-    color: black;
+    color: #FFF4ED;
 
     padding-top: 23px;
     padding-bottom: 23px;
@@ -82,9 +90,37 @@ body {
 
 }
 
-.main-content-option-link:hover {
-    background-color: black;
-    border: 1px solid black;
+.btn1:hover {
+    background-color: #5D756B;
+    border: 1px solid #5D756B;
+    border-radius: 50px;
+    color: white;
+}
+
+.btn2:hover {
+    background-color: #A7A7A7;
+    border: 1px solid #A7A7A7;
+    border-radius: 50px;
+    color: #1A1A1A;
+}
+
+.btn3:hover {
+    background-color: #77514A;
+    border: 1px solid #77514A;
+    border-radius: 50px;
+    color: white;
+}
+
+.btn4:hover {
+    background-color: #B9A672;
+    border: 1px solid #B9A672;
+    border-radius: 50px;
+    color: #1A1A1A;
+}
+
+.btn5:hover {
+    background-color: #938479;
+    border: 1px solid #938479;
     border-radius: 50px;
     color: white;
 }

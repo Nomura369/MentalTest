@@ -1,5 +1,5 @@
 html {
-    background-color: #BAA398; /*暫定*/
+    background-color: #534943;
     box-sizing: border-box; /*預設是cotent-box*/
 }
 
@@ -44,7 +44,6 @@ body {
 
 .main-image {
     display: block;
-    box-shadow: 0 3px 8px #292D34; /*暫定*/
 }
 
 .main-button {
@@ -57,19 +56,19 @@ body {
 
 .main-button-link {
     text-decoration: none;
-    color: black; /*暫定*/
+    color: #1A1A1A;
     padding: 23px 88px 22px 80px; /*最後為對齊用*/
 
-    background-color: #d9d9d9;
-    border: 1px solid #d9d9d9;
+    background-color: #BCA59D;
+    border: 1px solid #BCA59D;
     border-radius: 50px;
 }
 
 .main-button-link:hover {
-    /*改變字體顏色和背景圖(暫定)*/
+    /*改變字體顏色和背景色*/
     color: white;
-    background-color: black;
-    border: 1px solid black;
+    background-color: #1A1A1A;
+    border: 1px solid #1A1A1A;
     border-radius: 50px;
 }
 
