@@ -19,5 +19,3 @@ function recordClickTimes(value, index){
 //主程式區
 scores.forEach(recordScores);
 clickTimes.forEach(recordClickTimes);
-
-//這部分應該沒問題了
