@@ -5,17 +5,17 @@ let clickTimes = [0, 0, 0, 0, 0]; //紀錄每一頁有點擊選項的次數
 function recordScores(value, index){
     let valueString = value.toString();
     let indexString = index.toString();
-    localStorage.setItem(index, value);
+    localStorage.setItem(indexString, valueString);
 }
 
 function recordClickTimes(value, index){
     let valueString = value.toString();
     let indexString = index.toString() + "page";
-    localStorage.setItem(index, value);
+    localStorage.setItem(indexString, indexString);
 }
 
 scores.forEach(recordScores);
 clickTimes.forEach(recordClickTimes);
 
 
-//目前沒有問題……理論上
+//呃不問題很大

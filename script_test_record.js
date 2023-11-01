@@ -12,7 +12,8 @@ function WhichToStore(index){
 }
 
 function whetherClick(){
-    if(clicks == 1){ 
+    clicks = parseInt(newScore);
+    if(clicks > 1){ 
         //限定一頁只存入一筆資料
         //返回後資料並不會消除，所以回去點了第二次後，需要將上一筆刪除，再添增新的上去
         //這頁被點擊過 => 刪除原先輸入的資料(等等怎麼刪www)
@@ -31,7 +32,9 @@ function whetherClick(){
 
 
 //主程式區
-whetherClick();
+window.onload = function(){
+    whetherClick();
+}
 document.querySelector(".main-content-option-link").addEventListener("click", addClicks);
 
 
