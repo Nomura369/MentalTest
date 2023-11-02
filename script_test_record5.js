@@ -29,12 +29,12 @@ function addClickTime(){
 
 
 //主程式區
-document.querySelector("#id1").addEventListener("click", function(){ addScore("0"); });
-document.querySelector("#id2").addEventListener("click", function(){ addScore("1"); });
-document.querySelector("#id3").addEventListener("click", function(){ addScore("2"); });
-document.querySelector("#id4").addEventListener("click", function(){ addScore("3"); });
-document.querySelector("#id5").addEventListener("click", function(){ addScore("4"); });
-document.querySelector(".main-content-option-link").addEventListener("click", addClickTime); //以上任一按鈕被點都會觸發
+document.querySelector("#id1").addEventListener("click", function(){ addScore("0"); addClickTime(); });
+document.querySelector("#id2").addEventListener("click", function(){ addScore("1"); addClickTime(); });
+document.querySelector("#id3").addEventListener("click", function(){ addScore("2"); addClickTime(); });
+document.querySelector("#id4").addEventListener("click", function(){ addScore("3"); addClickTime(); });
+document.querySelector("#id5").addEventListener("click", function(){ addScore("4"); addClickTime(); });
+
 
 
 
