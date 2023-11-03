@@ -34,7 +34,7 @@ body {
 .main {
     display: flex;
     justify-content: center;
-    /*align-items: center;*/
+    align-items: center;
 
     /*置中效果*/
     max-width: 1280px;

@@ -75,18 +75,28 @@ body {
     background-color: #60423C;
 }
 
-.main {
-    opacity: 0;
-
+.middle { /*主內容+按鈕*/
     display: flex;
-
-    margin-top: 99px;
-    margin-bottom: 121px;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+     
     /*置中效果*/
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.main {
+    opacity: 0;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 99px;
+    margin-bottom: 121px;
+
 }
 
 .main-image {
@@ -135,11 +145,6 @@ body {
 .button {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 2em; /*32px*/
-    
-    display: flex;
-    justify-content: center;
-    flex-grow: 1; /*可佔滿垂直剩餘的空間*/
-    
 }
 
 .button-content {
