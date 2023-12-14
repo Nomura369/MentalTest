@@ -5,32 +5,35 @@
         <title>測試你的聖誕角色</title>
         <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
-        <!--以下為字體引入區(NotoSans-Regular)-->
+        <!--以下為字體引入區(NotoSans-Regular和Kranky)-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
         <!--js與jQuery引入區-->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="script.js"></script>
     </head>
 
     <body>
+        <!--其實不是所有東西都需要放在container裡面對吧？重要的是想要做出的效果……嗎？-->
         <div class="container">
             <!--header先打起來放-->
             <header class="header"></header>
 
             <article class="main">
-                <img class="main-image" src="images/cover.gif" alt="開始頁">
-                <p class="main-button">
-                    <a class="main-button-link" href="test1.html">開始測驗</a>
-                </p>
+                <a class="main-button" href="test1.html">開始測驗</a>
             </article>
-
-            <footer class="footer">
-                <!--內容為暫定-->
-                <p class="footer-content">&copy;趣味性心理測驗</p>
-            </footer>
         </div>
+        
+        <footer class="footer">
+            <div class="footer-logo">
+                <img class="footer-logo-image" src="" alt="logo">
+                <p class="footer-logo-word">J&J Lab.</p>
+            </div>
+        </footer>
 
         <!--未包含jQuery的js引入區-->
         <script src="script_index_record.js"></script>

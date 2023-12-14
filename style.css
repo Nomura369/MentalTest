@@ -18,6 +18,12 @@ body {
     height: 100vh; /*滿版的高度*/
 
     min-width: 1080px; /*畫面縮小後東西比較不會擠在一起*/
+
+    opacity: 0;
+    background-image: url("/images/cover.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; /*可以達成高度滿版的效果*/
 }
 
 .header {
@@ -30,42 +36,30 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     flex-grow: 1; /*可佔滿垂直剩餘的空間*/
-    
-    /*置中效果*/
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-
-    margin-top: 120px;
-    margin-bottom: 142px; /*120+22*/
-
 }
 
 .main-image {
-    display: block;
+    
 }
 
 .main-button {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 2em; /*32px*/
 
-    margin-top: 72px;
-    margin-bottom: 0;
-}
-
-.main-button-link {
     text-decoration: none;
     color: #1A1A1A;
     padding: 23px 88px 22px 80px; /*最後為對齊用*/
+
+    margin-bottom: 40px;
 
     background-color: #BCA59D;
     border: 1px solid #BCA59D;
     border-radius: 50px;
 }
 
-.main-button-link:hover {
+.main-button:hover {
     /*改變字體顏色和背景色*/
     color: white;
     background-color: #1A1A1A;
@@ -74,14 +68,24 @@ body {
 }
 
 .footer {
-    background-color: black; /*暫定*/
+    background-color: #332B26;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-.footer-content {
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1em;
-    color: #d9d9d9; /*暫定*/
-    margin: 21px 0;
+.footer-logo {
+   margin-top: 30px;
+   margin-bottom: 28px;
+}
+
+.footer-logo-image {
+    margin-bottom: 11px;
+}
+
+.footer-logo-word {
+    font-family: 'Kranky', serif;
+    font-size: 1.25em; /*20px*/
+    color: white;
+    margin: 0; /*清除<p>的預設格式*/
 }
