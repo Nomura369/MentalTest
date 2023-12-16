@@ -1,5 +1,6 @@
 html {
-    background-color: #534943;
+    /*background-color: #534943; /*配合圖片顏色*/
+    background-color: #332B26; /*配合footer顏色*/
     box-sizing: border-box; /*預設是cotent-box*/
 }
 
@@ -8,22 +9,16 @@ html {
 }
 
 body {
-    font-size: 100%; /*不知道有沒有必要，但還是寫一下*/
+    font-size: 100%; /*16px，寫一下比較安心*/
 }
 
 .container {
+    /*使header、main和footer置中*/
     display: flex;
     flex-direction: column;
+    align-items: center;
 
-    height: 100vh; /*滿版的高度*/
-
-    min-width: 1080px; /*畫面縮小後東西比較不會擠在一起*/
-
-    opacity: 0;
-    background-image: url("/images/cover.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; /*可以達成高度滿版的效果*/
+    opacity: 0; /*淡入用*/
 }
 
 .header {
@@ -31,28 +26,33 @@ body {
 }
 
 .main {
-    opacity: 0;
-    
+    /*使圖片和按鈕置中*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
-    flex-grow: 1; /*可佔滿垂直剩餘的空間*/
+
+    flex-grow: 1; /*可佔滿垂直剩餘的空間(包括縮放)*/
+    /*意味著footer會固定在最下方...等等看起來並沒有*/
+
+    position: relative; /*按鈕對齊的基準*/
 }
 
 .main-image {
-    
+    display: block;
+    max-width: 100%; /*避免下述的滿版範圍超出整個容器*/
+    width: 100vw; /*滿版的寬度*/
 }
 
 .main-button {
     font-family: 'Noto Sans TC', sans-serif;
-    font-size: 2em; /*32px*/
+    font-size: 2.3em; /*36.8px，稍微放大了點*/
 
     text-decoration: none;
     color: #1A1A1A;
     padding: 23px 88px 22px 80px; /*最後為對齊用*/
 
-    margin-bottom: 40px;
+    position: absolute; /*放在圖片上面*/
+    bottom: 60px;
 
     background-color: #BCA59D;
     border: 1px solid #BCA59D;
@@ -69,14 +69,17 @@ body {
 
 .footer {
     background-color: #332B26;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%; /*與父元件(相當於網頁本身)寬度相同*/
 }
 
 .footer-logo {
-   margin-top: 30px;
-   margin-bottom: 28px;
+    margin-top: 30px;
+    margin-bottom: 28px;
+    
+    /*使logo的圖片與文字置中*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-logo-image {
