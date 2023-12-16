@@ -17,8 +17,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    opacity: 0; /*淡入用*/
 }
 
 .header {
@@ -26,6 +24,8 @@ body {
 }
 
 .main {
+    opacity: 0; /*淡入用*/
+
     /*使圖片和按鈕置中*/
     display: flex;
     flex-direction: column;
