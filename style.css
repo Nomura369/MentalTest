@@ -44,28 +44,126 @@ body {
 }
 
 .main-button {
+    /*按鈕的主要樣式還是放在main-button-link類別裡*/
+    display: flex;
+    justify-content: center;
+
+    position: absolute; /*放在圖片上面*/
+    bottom: 5.5%; 
+}
+
+.main-button-link {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 2.3em; /*36.8px，稍微放大了點*/
 
     text-decoration: none;
-    color: #1A1A1A;
+    color: #BEA69E;
     padding: 23px 88px 22px 80px; /*最後為對齊用*/
 
-    position: absolute; /*放在圖片上面*/
-    bottom: 60px;
-
-    background-color: #BCA59D;
-    border: 1px solid #BCA59D;
+    background-color: #524841;
+    border: 1px solid #524841;
     border-radius: 50px;
+
+    position: relative;
+    z-index: 2;
 }
 
-.main-button:hover {
+.main-button-link:hover {
     /*改變字體顏色和背景色*/
-    color: white;
-    background-color: #1A1A1A;
-    border: 1px solid #1A1A1A;
+    color: #524841;
+    background-color: #BEA69E;
+    border: 1px solid #BEA69E;
     border-radius: 50px;
 }
+
+/*按鈕點擊特效之起點*/
+.main-button-link:active {
+    box-shadow: 0 8px 10px #534943;
+}
+
+.main-button-dot { /*點點的軌道設置*/
+    position: absolute; /*基準設在按鈕(連結)上*/
+    z-index: 0;
+    display: block;
+    width: 200px;
+    height: 10px;
+    transform-origin: 5px 5px;
+    pointer-events: none;
+}
+
+.main-button .main-button-dot:nth-child(1) { /*八個點點的軌道方向*/
+    top: 50%;
+    left: 100%;
+    transform: translate3d(-10px, -5px, 0);
+}
+
+.main-button .main-button-dot:nth-child(2) {
+    bottom: 0;
+    left: 100%;
+    transform: translate3d(-10px, 0, 0) rotate(45deg);
+}
+
+.main-button .main-button-dot:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-5px, 0, 0) rotate(90deg);
+}
+
+.main-button .main-button-dot:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    transform: rotate(135deg);
+}
+
+.main-button .main-button-dot:nth-child(5) {
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -5px, 0) rotate(180deg);
+}
+
+.main-button .main-button-dot:nth-child(6) {
+    top: 0;
+    left: 0;
+    transform: rotate(225deg);
+}
+
+.main-button .main-button-dot:nth-child(7) {
+    top: 0;
+    left: 50%;
+    transform: translate3d(-5px, 0, 0) rotate(270deg);
+}
+
+.main-button .main-button-dot:nth-child(8) {
+    top: 0;
+    left: 100%;
+    transform: translate3d(-10px, 0, 0) rotate(315deg);
+}
+
+.main-button .main-button-dot:before { /*點點本身的樣式設定*/
+    content: "";
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    background-color: #BEA69E;
+    border-radius: 50%;
+    
+    offset-path: path("M0 1c7.1 0 10.7 2 14.3 4s7.1 4 14.3 4 10.7-2 14.3-4 7.2-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4");
+    offset-distance: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: offset-distance 300ms, opacity 600ms; /*中間是發射速度*/
+}
+
+.main-button:active .main-button-dot:before {
+    offset-distance: 0;
+    opacity: 1;
+    transition: offset-distance 0ms, opacity 0ms;
+}
+/*按鈕點擊特效之終點*/
 
 .footer {
     background-color: #332B26;
