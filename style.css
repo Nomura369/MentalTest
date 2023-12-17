@@ -1,5 +1,14 @@
+/*字體引入區(思源宋體)*/
+@font-face {
+    font-family: 'Source Han Serif TC';
+    src: url('fonts/SourceHanSerifTC-VF.otf') format('otf'),
+         url('fonts/SourceHanSerifTC-VF.ttf') format('ttf');
+}
+
+
 html {
-    background-color: #534943;
+    /*background-color: #534943; /*配合圖片顏色*/
+    background-color: #332B26; /*配合footer顏色*/
     box-sizing: border-box; /*預設是cotent-box*/
 }
 
@@ -8,22 +17,14 @@ html {
 }
 
 body {
-    font-size: 100%; /*不知道有沒有必要，但還是寫一下*/
+    font-size: 100%; /*16px，寫一下比較安心*/
 }
 
 .container {
+    /*使header、main和footer置中*/
     display: flex;
     flex-direction: column;
-
-    height: 100vh; /*滿版的高度*/
-
-    min-width: 1080px; /*畫面縮小後東西比較不會擠在一起*/
-
-    opacity: 0;
-    background-image: url("/images/cover.gif");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain; /*可以達成高度滿版的效果*/
+    align-items: center;
 }
 
 .header {
@@ -31,52 +32,160 @@ body {
 }
 
 .main {
-    opacity: 0;
-    
+    opacity: 0; /*淡入用*/
+
+    /*使圖片和按鈕置中*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
-    flex-grow: 1; /*可佔滿垂直剩餘的空間*/
+
+    flex-grow: 1; /*可佔滿垂直剩餘的空間(包括縮放)*/
+    /*意味著footer會固定在最下方...等等看起來並沒有*/
+
+    position: relative; /*按鈕對齊的基準*/
 }
 
 .main-image {
-    
+    display: block;
+    max-width: 100%; /*避免下述的滿版範圍超出整個容器*/
+    width: 100vw; /*滿版的寬度*/
 }
 
 .main-button {
-    font-family: 'Noto Sans TC', sans-serif;
+    /*按鈕的主要樣式還是放在main-button-link類別裡*/
+    display: flex;
+    justify-content: center;
+
+    position: absolute; /*放在圖片上面*/
+    bottom: 5%; 
+}
+
+.main-button-link {
+    font-family: 'Source Han Serif TC', sans-serif; /*備用的字體不需用引號括起來*/
     font-size: 2em; /*32px*/
 
     text-decoration: none;
-    color: #1A1A1A;
-    padding: 23px 88px 22px 80px; /*最後為對齊用*/
+    color: #BEA69E;
+    padding: 24px 88px 22px 80px; /*因為需要對齊所以上下、左右的值不同*/
 
-    margin-bottom: 40px;
-
-    background-color: #BCA59D;
-    border: 1px solid #BCA59D;
+    background-color: #524841;
+    border: 1px solid #524841;
     border-radius: 50px;
+
+    position: relative;
+    z-index: 2;
 }
 
-.main-button:hover {
+.main-button-link:hover {
     /*改變字體顏色和背景色*/
-    color: white;
-    background-color: #1A1A1A;
-    border: 1px solid #1A1A1A;
+    color: #524841;
+    background-color: #BEA69E;
+    border: 1px solid #BEA69E;
     border-radius: 50px;
 }
+
+/*按鈕點擊特效之起點*/
+.main-button-link:active {
+    box-shadow: 0 8px 10px #534943;
+}
+
+.main-button-dot { /*點點的軌道設置*/
+    position: absolute; /*基準設在按鈕(連結)上*/
+    z-index: 0;
+    display: block;
+    width: 200px;
+    height: 10px;
+    transform-origin: 5px 5px;
+    pointer-events: none;
+}
+
+.main-button .main-button-dot:nth-child(1) { /*八個點點的軌道方向*/
+    top: 50%;
+    left: 100%;
+    transform: translate3d(-10px, -5px, 0);
+}
+
+.main-button .main-button-dot:nth-child(2) {
+    bottom: 0;
+    left: 100%;
+    transform: translate3d(-10px, 0, 0) rotate(45deg);
+}
+
+.main-button .main-button-dot:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-5px, 0, 0) rotate(90deg);
+}
+
+.main-button .main-button-dot:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    transform: rotate(135deg);
+}
+
+.main-button .main-button-dot:nth-child(5) {
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -5px, 0) rotate(180deg);
+}
+
+.main-button .main-button-dot:nth-child(6) {
+    top: 0;
+    left: 0;
+    transform: rotate(225deg);
+}
+
+.main-button .main-button-dot:nth-child(7) {
+    top: 0;
+    left: 50%;
+    transform: translate3d(-5px, 0, 0) rotate(270deg);
+}
+
+.main-button .main-button-dot:nth-child(8) {
+    top: 0;
+    left: 100%;
+    transform: translate3d(-10px, 0, 0) rotate(315deg);
+}
+
+.main-button .main-button-dot:before { /*點點本身的樣式設定*/
+    content: "";
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    background-color: #BEA69E;
+    border-radius: 50%;
+    
+    offset-path: path("M0 1c7.1 0 10.7 2 14.3 4s7.1 4 14.3 4 10.7-2 14.3-4 7.2-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4");
+    offset-distance: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: offset-distance 300ms, opacity 600ms; /*中間是發射速度*/
+}
+
+.main-button:active .main-button-dot:before {
+    offset-distance: 0;
+    opacity: 1;
+    transition: offset-distance 0ms, opacity 0ms;
+}
+/*按鈕點擊特效之終點*/
 
 .footer {
     background-color: #332B26;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%; /*與父元件(相當於網頁本身)寬度相同*/
 }
 
 .footer-logo {
-   margin-top: 30px;
-   margin-bottom: 28px;
+    margin-top: 30px;
+    margin-bottom: 28px;
+    
+    /*使logo的圖片與文字置中*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-logo-image {
@@ -88,4 +197,33 @@ body {
     font-size: 1.25em; /*20px*/
     color: white;
     margin: 0; /*清除<p>的預設格式*/
+}
+
+/*RWD設定之桌機first*/
+@media (max-width: 1200px){ /*筆電格式*/
+    .main-button {
+        bottom: 4.5%;
+    }
+    .main-button-link {
+        font-size: 1.7em;
+        padding: 21px 85px 19px 77px; /*因為需要對齊所以上下、左右的值不同*/
+    }
+}
+@media (max-width: 780px){ /*平板格式*/
+    .main-button {
+        bottom: 4%; 
+    }
+    .main-button-link {
+        font-size: 1.4em;
+        padding: 17px 81px 15px 73px; /*因為需要對齊所以上下、左右的值不同*/
+    }
+}
+@media (max-width: 576px){ /*手機格式*/
+    .main-button {
+        bottom: 3%; 
+    }
+    .main-button-link {
+        font-size: 1em;
+        padding: 13px 77px 11px 69px; /*因為需要對齊所以上下、左右的值不同*/
+    }
 }

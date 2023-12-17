@@ -1,21 +1,18 @@
-//宣告區
-let scores = [0, 0, 0, 0, 0]; //紀錄每個選項被點擊的次數
-let clickTimes = [0, 0, 0, 0, 0]; //紀錄每一頁有點擊選項的次數
+$(document).ready(function() {
+    //Firebase初始化
+    firebase.initializeApp({
+        apiKey: "AIzaSyCH5c_zQVDfln4wmzVb6Pr56y8UgD3NsHM",
+        authDomain: "mentaltest-1ceda.firebaseapp.com",
+        projectId: "mentaltest-1ceda",
+        storageBucket: "mentaltest-1ceda.appspot.com",
+        messagingSenderId: "684988781392",
+        appId: "1:684988781392:web:127966dd6653a89c165255"
+      });
 
-
-function recordScores(value, index){
-    let valueString = value.toString();
-    let indexString = index.toString();
-    localStorage.setItem(indexString, valueString);
-}
-
-function recordClickTimes(value, index){
-    let valueString = value.toString();
-    let indexString = index.toString() + "page";
-    localStorage.setItem(indexString, valueString);
-}
-
-
-//主程式區
-scores.forEach(recordScores);
-clickTimes.forEach(recordClickTimes);
+    let db = firebase.firestore(); //宣告資料庫物件
+    let recordsRef = db.collection("records");
+    recordsRef.doc("1").set({
+        "scores":[0, 0, 0, 0, 0],
+        "clicks":[0, 0, 0, 0, 0]
+    });
+});
