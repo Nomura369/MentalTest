@@ -1,3 +1,11 @@
+/*字體引入區(思源宋體)*/
+@font-face {
+    font-family: 'Source Han Serif TC';
+    src: url('fonts/SourceHanSerifTC-VF.otf') format('otf'),
+         url('fonts/SourceHanSerifTC-VF.ttf') format('ttf');
+}
+
+
 html {
     /*background-color: #534943; /*配合圖片顏色*/
     background-color: #332B26; /*配合footer顏色*/
@@ -49,16 +57,16 @@ body {
     justify-content: center;
 
     position: absolute; /*放在圖片上面*/
-    bottom: 5.5%; 
+    bottom: 5%; 
 }
 
 .main-button-link {
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 2.3em; /*36.8px，稍微放大了點*/
+    font-family: 'Source Han Serif TC', sans-serif; /*備用的字體不需用引號括起來*/
+    font-size: 2em; /*32px*/
 
     text-decoration: none;
     color: #BEA69E;
-    padding: 23px 88px 22px 80px; /*最後為對齊用*/
+    padding: 24px 88px 22px 80px; /*因為需要對齊所以上下、左右的值不同*/
 
     background-color: #524841;
     border: 1px solid #524841;
@@ -189,4 +197,33 @@ body {
     font-size: 1.25em; /*20px*/
     color: white;
     margin: 0; /*清除<p>的預設格式*/
+}
+
+/*RWD設定之桌機first*/
+@media (max-width: 1200px){ /*筆電格式*/
+    .main-button {
+        bottom: 4.5%;
+    }
+    .main-button-link {
+        font-size: 1.7em;
+        padding: 21px 85px 19px 77px; /*因為需要對齊所以上下、左右的值不同*/
+    }
+}
+@media (max-width: 780px){ /*平板格式*/
+    .main-button {
+        bottom: 4%; 
+    }
+    .main-button-link {
+        font-size: 1.4em;
+        padding: 17px 81px 15px 73px; /*因為需要對齊所以上下、左右的值不同*/
+    }
+}
+@media (max-width: 576px){ /*手機格式*/
+    .main-button {
+        bottom: 3%; 
+    }
+    .main-button-link {
+        font-size: 1em;
+        padding: 13px 77px 11px 69px; /*因為需要對齊所以上下、左右的值不同*/
+    }
 }
