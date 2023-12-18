@@ -220,7 +220,7 @@ body {
     }
     .main-button-link {
         font-size: 1.4em;
-        padding: 15px 81px 15px 73px; /*因為需要對齊所以上下、左右的值不同*/
+        padding: 15px 75px 15px 67px; /*因為需要對齊所以上下、左右的值不同*/
     }
     .main-button .main-button-dot:before { /*點點本身的樣式設定*/
         offset-distance: 25%;
@@ -232,7 +232,20 @@ body {
     }
     .main-button-link {
         font-size: 1em;
-        padding: 11px 75px 11px 67px; /*因為需要對齊所以上下、左右的值不同*/
+        padding: 11px 50px 11px 46px; /*因為需要對齊所以上下、左右的值不同*/
+    }
+    .main-button .main-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 15%;
+    }
+}
+
+@media (max-width: 360px){ /*更小的手機格式*/
+    .main-button {
+        bottom: 2.5%; 
+    }
+    .main-button-link {
+        font-size: 0.8em;
+        padding: 7px 30px 7px 30px; /*因為需要對齊所以上下、左右的值不同*/
     }
     .main-button .main-button-dot:before { /*點點本身的樣式設定*/
         offset-distance: 15%;
