@@ -1,3 +1,9 @@
+/*字體引入區(思源宋體)*/
+@font-face {
+    font-family: 'Source Han Serif TC';
+    src: url('fonts/SourceHanSerifTC-Regular.otf');
+}
+
 html {
     box-sizing: border-box; /*預設是cotent-box*/
 }
@@ -28,13 +34,26 @@ body {
 }
 
 .header {
+    background-color: #332B26;
+}
 
+.header-home {
+    
+}
+
+.header-home-icon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 63px;
+}
+
+.header-home-icon:hover {
+    content: url("images/home_icon_hover.png");
 }
 
 .main {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 
     /*置中效果*/
     max-width: 1280px;
@@ -46,26 +65,31 @@ body {
     flex-grow: 1;
 }
 
-.main-scene {
-    opacity: 0;
-    
-    margin-right: 90px;
-}
-
-.main-scene-image {
-    display: block;
-    box-shadow: 0 3px 5px #4D433C;
+.main-progress {
+    /*寬度得滿版才行*/
 }
 
 .main-content {
-    opacity: 0;
-    
     display: flex;
-    flex-direction: column;
 }
 
-.main-content-topic {
-    font-family: 'Noto Sans TC', sans-serif;
+.main-content-scene {
+    margin-right: 90px;
+}
+
+.main-content-scene-image {
+    display: block;
+    box-shadow: 0 3px 5px #4D433C; /*陰影需要調整一下*/
+}
+
+.main-content-word {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.topic {
+    font-family: 'Source Han Serif TC', serif;
     color: #4D433C;
     font-size: 1.75em; /*28px*/
     font-weight: 700;
@@ -73,16 +97,16 @@ body {
     margin: 0 0 20px 0;
 }
 
-.main-content-option{
+.option{
     display: flex;
     flex-direction: column;
 }
 
-.main-content-option-link {
+.option-link {
     text-decoration: none;
     text-align: center;
 
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Source Han Serif TC', serif;
     font-size: 1.5625em; /*25px*/
     background-color: #4D433C;
     border: 1px solid #4D433C;
@@ -131,19 +155,32 @@ body {
     color: white;
 }
 
-.main-content-option-link-caption {
+.option-link-caption {
     margin: 0;
 }
 
 .footer {
-    background-color: black; /*暫定*/
-    display: flex;
-    justify-content: center;
+    background-color: #332B26;
+    width: 100%; /*與父元件(相當於網頁本身)寬度相同*/
 }
 
-.footer-content {
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1em;
-    color: #d9d9d9; /*暫定*/
-    margin: 21px 0;
+.footer-logo {
+    margin-top: 30px;
+    margin-bottom: 16px;
+    
+    /*使logo的圖片與文字置中*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo-image {
+    
+}
+
+.footer-logo-word {
+    font-family: 'Kranky', serif;
+    font-size: 1.25em; /*20px*/
+    color: white;
+    margin: 0; /*清除<p>的預設格式*/
 }
