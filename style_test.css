@@ -28,9 +28,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    height: 100vh; /*滿版的高度*/
-
-    min-width: 1080px; /*畫面縮小後東西比較不會擠在一起*/
+    height: 100vh; /*縮放時頁面最小會維持滿版*/
 }
 
 .header {
@@ -54,23 +52,28 @@ body {
 .main {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+}
 
+.main-progress {
+    display: block;
+    
+    width: 100vw; /*滿版的寬度*/
+    max-width: 100%; /*避免下述的滿版範圍超出整個容器*/
+
+    margin-top: 19px;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    
     /*置中效果*/
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 66px;
     margin-bottom: 66px;
-    
-    flex-grow: 1;
-}
-
-.main-progress {
-    /*寬度得滿版才行*/
-}
-
-.main-content {
-    display: flex;
 }
 
 .main-content-scene {
@@ -98,26 +101,28 @@ body {
 }
 
 .option{
-    display: flex;
-    flex-direction: column;
+    
 }
 
-.option-link {
+.option-button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px; /*按鈕間距*/
+}
+
+.option-button-link {
     text-decoration: none;
     text-align: center;
 
     font-family: 'Source Han Serif TC', serif;
     font-size: 1.5625em; /*25px*/
     background-color: #4D433C;
+    padding-top: 23px;
+    padding-bottom: 23px;
     border: 1px solid #4D433C;
     border-radius: 50px;
     color: #FFF4ED;
-
-    padding-top: 23px;
-    padding-bottom: 23px;
-
-    margin-top: 25px; /*按鈕間距*/
-
 }
 
 .btn1:hover {
@@ -155,9 +160,92 @@ body {
     color: white;
 }
 
-.option-link-caption {
-    margin: 0;
+/*按鈕點擊特效之起點*/
+.option-button-dot { /*點點的軌道設置*/
+    position: absolute; /*基準設在同一層的按鈕(連結)上*/
+    display: block;
+    
+    /*避免佔據太大範圍*/
+    width: 1px;
+    height: 1px;
+    
+    transform-origin: 5px 5px;
+    pointer-events: none; /*避免因滑鼠滑過等原因觸發不必要的事件*/
 }
+
+.option-button .option-button-dot:nth-child(1) { /*八個點點的軌道方向*/
+    top: 50%;
+    left: 100%;
+    transform: translate3d(-10px, -5px, 0);
+}
+
+.option-button .option-button-dot:nth-child(2) {
+    bottom: 0;
+    left: 100%;
+    transform: translate3d(-10px, 0, 0) rotate(45deg);
+}
+
+.option-button .option-button-dot:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-5px, 0, 0) rotate(90deg);
+}
+
+.option-button .option-button-dot:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    transform: rotate(135deg);
+}
+
+.option-button .option-button-dot:nth-child(5) {
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -5px, 0) rotate(180deg);
+}
+
+.option-button .option-button-dot:nth-child(6) {
+    top: 0;
+    left: 0;
+    transform: rotate(225deg);
+}
+
+.option-button .option-button-dot:nth-child(7) {
+    top: 0;
+    left: 50%;
+    transform: translate3d(-5px, 0, 0) rotate(270deg);
+}
+
+.option-button .option-button-dot:nth-child(8) {
+    top: 0;
+    left: 100%;
+    transform: translate3d(-10px, 0, 0) rotate(315deg);
+}
+
+.option-button .option-button-dot:before { /*點點本身的樣式設定*/
+    content: "";
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    background-color: #5D756B;
+    border-radius: 50%;
+    
+    offset-path: path("M0 1c7.1 0 10.7 2 14.3 4s7.1 4 14.3 4 10.7-2 14.3-4 7.2-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4");
+    offset-distance: 25%;
+    pointer-events: none;
+    opacity: 0;
+    transition: offset-distance 300ms, opacity 600ms; /*中間是發射速度*/
+}
+
+.option-button:active .option-button-dot:before {
+    offset-distance: 0;
+    opacity: 1;
+    transition: offset-distance 0ms, opacity 0ms;
+}
+/*按鈕點擊特效之終點*/
 
 .footer {
     background-color: #332B26;
