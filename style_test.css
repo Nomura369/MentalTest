@@ -45,10 +45,6 @@ body {
     margin-left: 63px;
 }
 
-.header-home-icon:hover {
-    content: url("images/home_icon_hover.png");
-}
-
 .main {
     display: flex;
     flex-direction: column;
@@ -56,12 +52,15 @@ body {
 }
 
 .main-progress {
+    opacity: 0; /*淡入用*/
+
     display: block;
     
     width: 100vw; /*滿版的寬度*/
     max-width: 100%; /*避免下述的滿版範圍超出整個容器*/
 
-    margin-top: 19px;
+    margin-top: 18px;
+    margin-bottom: 20px;
 }
 
 .main-content {
@@ -72,20 +71,32 @@ body {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 66px;
     margin-bottom: 66px;
 }
 
 .main-content-scene {
+    opacity: 0; /*淡入用*/
+
     margin-right: 90px;
+    position: relative;
 }
 
 .main-content-scene-image {
-    display: block;
-    box-shadow: 0 3px 5px #4D433C; /*陰影需要調整一下*/
+
+}
+
+.main-content-scene-shadow {
+    position: absolute;
+    left: 0;
+}
+
+.main-content-scene-card {
+    position: absolute;
+    left: 0;
 }
 
 .main-content-word {
+    opacity: 0; /*淡入用*/
     display: flex;
     flex-direction: column;
 

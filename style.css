@@ -84,10 +84,6 @@ body {
 }
 
 /*按鈕點擊特效之起點*/
-.main-button-link:active {
-    box-shadow: 0 8px 10px #534943;
-}
-
 .main-button-dot { /*點點的軌道設置*/
     position: absolute; /*基準設在按鈕(連結)上*/
     z-index: 0;
