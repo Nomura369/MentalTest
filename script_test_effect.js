@@ -10,7 +10,7 @@ $(document).ready(function() {
     
     //情境圖動畫
     let whetherPlayed = false;
-    let cardAnimation = function(){
+    function cardAnimation(){
         // 獲取當前滾動位置，若下滑超過特定位置則播放動畫（僅限一次）
         if(window.scrollY >= 350 && whetherPlayed == false){
             let card = document.querySelector(".main-content-scene-card");
@@ -26,7 +26,7 @@ $(document).ready(function() {
             
             whetherPlayed = true;
         }
-    };
+    }
 
     cardAnimation();
     window.addEventListener('scroll', function() {

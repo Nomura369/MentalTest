@@ -120,6 +120,8 @@ body {
     display: flex;
     flex-direction: column;
     margin-top: 25px; /*按鈕間距*/
+    
+    cursor: pointer;
 }
 
 .option-button-link {

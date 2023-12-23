@@ -10,9 +10,20 @@ $(document).ready(function() {
       });
 
     let db = firebase.firestore(); //宣告資料庫物件
-    let recordsRef = db.collection("records");
-    recordsRef.doc("1").set({
-        "scores":[0, 0, 0, 0, 0],
-        "clicks":[0, 0, 0, 0, 0]
+    let scoresRef = db.collection("scores");
+    let clicksRef = db.collection("clicks");
+    scoresRef.doc("default").set({
+        "a1": 0,
+        "a2": 0,
+        "a3": 0,
+        "a4": 0,
+        "a5": 0
+    });
+    clicksRef.doc("default").set({
+        "q1": false,
+        "q2": false,
+        "q3": false,
+        "q4": false,
+        "q5": false
     });
 });
