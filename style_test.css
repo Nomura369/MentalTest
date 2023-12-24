@@ -49,6 +49,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    align-items: center; /*置中效果*/
 }
 
 .main-progress {
@@ -66,18 +67,18 @@ body {
 .main-content {
     display: flex;
     align-items: center;
-    
+        
     /*置中效果*/
     max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 7%;
+    margin-right: 7%;
     margin-bottom: 66px;
 }
 
 .main-content-scene {
     opacity: 0; /*淡入用*/
 
-    margin-right: 90px;
+    margin-right: 7%;
     position: relative;
 }
 
@@ -99,7 +100,6 @@ body {
     opacity: 0; /*淡入用*/
     display: flex;
     flex-direction: column;
-
 }
 
 .topic {
@@ -108,7 +108,7 @@ body {
     font-size: 1.75em; /*28px*/
     font-weight: 700;
     line-height: 1.5;
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
 }
 
 .option{
@@ -284,4 +284,128 @@ body {
     font-size: 1.25em; /*20px*/
     color: white;
     margin: 0; /*清除<p>的預設格式*/
+}
+
+/*RWD設定之桌機first*/
+@media (max-width: 1200px){ /*筆電格式*/
+    .topic {
+        font-size: 1.5em; 
+    }
+    .option-button-link {
+        font-size: 1.3em;
+    }
+    .option-button .option-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 35%;
+    }
+}
+@media (max-width: 992px) { /*介於筆電和平板中間*/
+    .header-home-icon {
+        margin-left: 53px;
+    }
+    .main-content {
+        align-items: center;
+    }
+    .main-content-scene-image {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-shadow {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-card {
+        width: 400px;
+        height: 560px;
+    }
+    .topic {
+        font-size: 1.5em; 
+    }
+    .option-button {
+        margin-top: 15px;
+    }
+    .option-button-link {
+        font-size: 1.3em;
+    }
+    .option-button .option-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 27%;
+    }
+}
+@media (max-width: 780px){ /*平板格式*/
+    .header-home-icon {
+        margin-left: 43px;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-content-scene {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .option-button .option-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 20%;
+    }
+}
+@media (max-width: 576px){ /*手機格式*/
+    .header-home-icon {
+        margin-left: 33px;
+    }
+    .main-content-scene-image {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-shadow {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-card {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-word {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .topic {
+        font-size: 1.4em; 
+    }
+    .option-button-link {
+        font-size: 1.2em;
+    }
+    .option-button .option-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 20%;
+    }
+}
+
+@media (max-width: 400px){ /*更小的手機格式*/
+    .header-home-icon {
+        margin-left: 23px;
+    }
+    .main-content-scene-image {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-shadow {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-card {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-word {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .topic {
+        font-size: 1.2em; 
+    }
+    .option-button-link {
+        font-size: 1em;
+    }
+    .option-button .option-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 15%;
+    }
 }

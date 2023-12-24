@@ -210,6 +210,18 @@ body {
         offset-distance: 35%;
     }
 }
+@media (max-width: 992px) { /*介於筆電和平板中間*/
+    .main-button {
+        bottom: 4.25%;
+    }
+    .main-button-link {
+        font-size: 1.55em;
+        padding: 16.5px 79.5px 16.5px 72.5px; /*因為需要對齊所以上下、左右的值不同*/
+    }
+    .main-button .main-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 30%;
+    }
+}
 @media (max-width: 780px){ /*平板格式*/
     .main-button {
         bottom: 4%; 
@@ -224,20 +236,20 @@ body {
 }
 @media (max-width: 576px){ /*手機格式*/
     .main-button {
-        bottom: 3%; 
+        bottom: 3.5%; 
     }
     .main-button-link {
         font-size: 1em;
         padding: 11px 50px 11px 46px; /*因為需要對齊所以上下、左右的值不同*/
     }
     .main-button .main-button-dot:before { /*點點本身的樣式設定*/
-        offset-distance: 15%;
+        offset-distance: 10%;
     }
 }
 
-@media (max-width: 360px){ /*更小的手機格式*/
+@media (max-width: 400px){ /*更小的手機格式*/
     .main-button {
-        bottom: 2.5%; 
+        bottom: 3%; 
     }
     .main-button-link {
         font-size: 0.8em;

@@ -12,19 +12,36 @@ $(document).ready(function() {
     let whetherPlayed = false;
     function cardAnimation(){
         // 獲取當前滾動位置，若下滑超過特定位置則播放動畫（僅限一次）
-        if(window.scrollY >= 350 && whetherPlayed == false){
-            let card = document.querySelector(".main-content-scene-card");
-            setTimeout(function() {
-                card.setAttribute("src", "images/scene1_card2.png");
-            }, 500);
-            setTimeout(function() {
-                card.setAttribute("src", "images/scene1_card3.png");
-            }, 1000);
-            setTimeout(function() {
-                card.setAttribute("src", "images/scene1_card4.png");
-            }, 1500);
-            
-            whetherPlayed = true;
+        if(window.matchMedia("(max-width: 768px)").matches){
+            if(window.scrollY >= 100 && whetherPlayed == false){
+                let card = document.querySelector(".main-content-scene-card");
+                setTimeout(function() {
+                    card.setAttribute("src", "images/scene1_card2.png");
+                }, 500);
+                setTimeout(function() {
+                    card.setAttribute("src", "images/scene1_card3.png");
+                }, 1000);
+                setTimeout(function() {
+                    card.setAttribute("src", "images/scene1_card4.png");
+                }, 1500);
+                
+                whetherPlayed = true;
+            }
+        }else {
+            if(window.scrollY >= 250 && whetherPlayed == false){
+                let card = document.querySelector(".main-content-scene-card");
+                setTimeout(function() {
+                    card.setAttribute("src", "images/scene1_card2.png");
+                }, 500);
+                setTimeout(function() {
+                    card.setAttribute("src", "images/scene1_card3.png");
+                }, 1000);
+                setTimeout(function() {
+                    card.setAttribute("src", "images/scene1_card4.png");
+                }, 1500);
+                
+                whetherPlayed = true;
+            }
         }
     }
 
