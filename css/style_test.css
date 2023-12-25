@@ -86,6 +86,8 @@ body {
 
 }
 
+/*動畫差分起點*/
+/*第一題*/
 .main-content-scene-shadow {
     position: absolute;
     left: 0;
@@ -95,6 +97,30 @@ body {
     position: absolute;
     left: 0;
 }
+
+/*第二題*/
+.main-content-scene-sled {
+    position: absolute;
+    left: 0;
+}
+
+.main-content-scene-star1 {
+    position: absolute;
+    left: 0;
+}
+
+.main-content-scene-star2 {
+    position: absolute;
+    left: 0;
+}
+
+.main-content-scene-light {
+    opacity: 0; /*等雪橇淡出再淡入*/
+    position: absolute;
+    left: 0;
+}
+
+/*動畫差分終點*/
 
 .main-content-word {
     opacity: 0; /*淡入用*/
@@ -234,6 +260,14 @@ body {
     transform: translate3d(-10px, 0, 0) rotate(315deg);
 }
 
+.dot1:before {
+    background-color: #5D756B;
+}
+
+.dot2:before {
+    background-color: #A7A7A7;
+}
+
 .option-button .option-button-dot:before { /*點點本身的樣式設定*/
     content: "";
     top: 0;
@@ -243,7 +277,6 @@ body {
     width: 6px;
     height: 6px;
 
-    background-color: #5D756B;
     border-radius: 50%;
     
     offset-path: path("M0 1c7.1 0 10.7 2 14.3 4s7.1 4 14.3 4 10.7-2 14.3-4 7.2-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4");

@@ -10,7 +10,7 @@ $(document).ready(function() {
     
     //情境圖動畫
     let whetherPlayed = false;
-    function cardAnimation(){
+    function sceneAnimation(){
         // 獲取當前滾動位置，若下滑超過特定位置則播放動畫（僅限一次）
         if(window.matchMedia("(max-width: 768px)").matches){
             if(window.scrollY >= 100 && whetherPlayed == false){
@@ -45,9 +45,9 @@ $(document).ready(function() {
         }
     }
 
-    cardAnimation();
+    sceneAnimation();
     window.addEventListener('scroll', function() {
-        cardAnimation();
+        sceneAnimation();
     });
 
     //.header-home-icon的hover效果

@@ -15,44 +15,48 @@ $(document).ready(function() {
 
     //先檢查該網頁的選項是否被點擊過
     /*clicksRef.get().then(function(doc){ //doc為取得的資料
-      if(doc.data().q1 == true){
+      if(doc.data().q2 == true){
         alert("不好意思，上一題無法重新作答喔，系統將自動回到剛才的頁面"); //沒有回傳值
         window.history.forward();
       }
     })*/
     //主程式：監聽按鈕並計算分數與網頁點擊次數、播放離開特效、轉至其他頁面
     function addScoreAndClick(index){
-        //分數計算
+        //分數計算（從資料庫裡拿紀錄再將更新過的傳回去）
+        let ans = 0;
+        scoresRef.get().then(function(doc){
+            ans = doc.data().a2;
+        });
         switch(index){
             case "0":
                 scoresRef.update({
-                    "a1": 2
+                    "a1": (ans+=2)
                 });
                 break;
             case "1":
                 scoresRef.update({
-                    "a2": 4
+                    "a2": (ans+=4)
                 });
                 break;
             case "2":
                 scoresRef.update({
-                    "a3": 6
+                    "a3": (ans+=6)
                 });
                 break;
             case "3":
                 scoresRef.update({
-                    "a4": 8
+                    "a4": (ans+=8)
                 });
                 break;
             case "4":
                 scoresRef.update({
-                    "a5": 10
+                    "a5": (ans+=10)
                 });
                 break;
         }
         //網頁點擊次數計算
         clicksRef.update({
-            "q1": true
+            "q2": true
         });
     }
 
@@ -69,7 +73,7 @@ $(document).ready(function() {
         }, 2000);
         //前往下一頁
         setTimeout(function() {
-            window.location.href = "test2.html";
+            window.location.href = "test3.html";
         }, 2500);
     }
 
@@ -80,4 +84,8 @@ $(document).ready(function() {
     document.querySelector("#id5").addEventListener("click", function(){ addScoreAndClick("4"); leaveHere(); });
     
 });
+
+
+
+
 
