@@ -3,56 +3,125 @@
     <head>
         <meta charset="utf-8">
         <title>第三題</title>
+        <!--RWD設定-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--CSS引入區-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
-        <link href="style_test.css" rel="stylesheet">
-        <!--如果其他題的格式都一樣，其實可以引入同個css-->
-        <!--以下為字體引入區(NotoSans-Regular)-->
+        <link href="css/style_test.css" rel="stylesheet"><!--如果其他題的格式都一樣，其實可以引入同個css-->
+        <!--字體引入區(Kranky)--><!--思源宋體的引入寫在CSS-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
         <!--js與jQuery引入區-->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="script_test_effect.js"></script>
+        <script src="js/script_test_effect3.js"></script>
+        <!--Firebase函式庫引入區-->
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+        <script src="js/script_test_record3.js"></script>
     </head>
 
     <body>
         <div class="container">
-            <!--header先打起來放-->
-            <header class="header"></header>
+            <header class="header">
+                <a class="header-home" href="index.html">
+                    <img class="header-home-icon" src="images/home_icon_normal.png" alt="homepage">
+                </a>
+            </header>
 
             <article class="main">
-                <div class="main-scene">
-                    <img class="main-scene-image" src="images/scene3.png" alt="情境圖">
-                </div>
+                <img class="main-progress" src="images/progress3.png" alt="progress3">
                 <div class="main-content">
-                    <p class="main-content-topic">推開門，金黃色的暖光映入眼簾，一股薰衣草的香味撲鼻而來，你看到其他與會者正在快樂地享受茶會。桌上擺滿了琳瑯滿目的佳餚甜點，你會選擇拿什麼？</p>
-                    <div class="main-content-option">
-                        <a class="main-content-option-link btn3" id="id1" href="test4.html">
-                            <p class="main-content-option-link-caption">香蒜麵包與蘑菇濃湯</p>
-                        </a>
-                        <a class="main-content-option-link btn3" id="id2" href="test4.html">
-                            <p class="main-content-option-link-caption">烤雞披薩與可樂</p>
-                        </a>
-                        <a class="main-content-option-link btn3" id="id3" href="test4.html">
-                            <p class="main-content-option-link-caption">熱美式與巴斯克乳酪蛋糕</p>
-                        </a>
-                        <a class="main-content-option-link btn3" id="id4" href="test4.html">
-                            <p class="main-content-option-link-caption">萊姆莓莓氣泡飲與馬卡龍</p>
-                        </a>
-                        <a class="main-content-option-link btn3" id="id5" href="test4.html">
-                            <p class="main-content-option-link-caption">牛排與白葡萄酒</p>
-                        </a>
+                    <div class="main-content-scene">
+                        <img class="main-content-scene-image" src="images/scene3.png" alt="情境圖">
+                        <img class="main-content-scene-light" src="images/scene3_light.png" alt="燈光">
+                        <img class="main-content-scene-vase" src="images/scene3_vase.png" alt="花瓶">
+                        <img class="main-content-scene-food1" src="images/scene3_food1.png" alt="第一批食物">
+                        <img class="main-content-scene-food2" src="images/scene3_food2.png" alt="第二批食物">
+                        <img class="main-content-scene-food3" src="images/scene3_food3.png" alt="第三批食物">
+                        <img class="main-content-scene-food4" src="images/scene3_food4.png" alt="第四批食物">
+                        <!--因為情境圖會做動畫，所以可能會多幾個新類別-->
+                    </div>
+                    <div class="main-content-word">
+                        <p class="topic">推開門，金黃色的暖光映入眼簾，一股薰衣草的香味撲鼻而來，你看到其他與會者正在快樂地享受茶會。桌上擺滿了琳瑯滿目的佳餚甜點，你會選擇拿什麼？</p>
+                        <div class="option">
+                            <div class="option-button">
+                                <!--按鈕的點擊特效用-->
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <!--btn系列類別是用來設定hover的，而id則是用來計分的-->
+                                <a class="option-button-link btn3" id="id1">香蒜麵包與蘑菇濃湯</a>
+                            </div>
+                            <div class="option-button">
+                                <!--按鈕的點擊特效用-->
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <!--btn系列類別是用來設定hover的，而id則是用來計分的-->
+                                <a class="option-button-link btn3" id="id2">烤雞披薩與可樂</a>
+                            </div>
+                            <div class="option-button">
+                                <!--按鈕的點擊特效用-->
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <!--btn系列類別是用來設定hover的，而id則是用來計分的-->
+                                <a class="option-button-link btn3" id="id3">熱美式與巴斯克乳酪蛋糕</a>
+                            </div>
+                            <div class="option-button">
+                                <!--按鈕的點擊特效用-->
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <!--btn系列類別是用來設定hover的，而id則是用來計分的-->
+                                <a class="option-button-link btn3" id="id4">萊姆莓莓氣泡飲與馬卡龍</a>
+                            </div>
+                            <div class="option-button">
+                                <!--按鈕的點擊特效用-->
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <span class="option-button-dot dot3"></span>
+                                <!--btn系列類別是用來設定hover的，而id則是用來計分的-->
+                                <a class="option-button-link btn3" id="id5">牛排與白葡萄酒</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
 
             <footer class="footer">
-                <!--內容為暫定-->
-                <p class="footer-content">&copy;趣味性心理測驗</p>
+                <div class="footer-logo">
+                    <img class="footer-logo-image" src="images/logo.png" alt="logo">
+                    <p class="footer-logo-word">J&J Lab.</p>
+                </div>
             </footer>
-
-            <!--未包含jQuery的js引入區-->
-            <script src="script_test_record3.js"></script>
         </div>
     </body>
 </html>

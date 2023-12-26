@@ -20,40 +20,34 @@ $(document).ready(function() {
         window.history.forward();
       }
     })*/
+
     //主程式：監聽按鈕並計算分數與網頁點擊次數、播放離開特效、轉至其他頁面
     function addScoreAndClick(index){
         //分數計算（從資料庫裡拿紀錄再將更新過的傳回去）
         let ans = 0;
         scoresRef.get().then(function(doc){
-            ans = doc.data().a2;
+            ans = doc.data().a2; //紀錄第二題使用者選的選項
         });
         switch(index){
             case "0":
-                scoresRef.update({
-                    "a1": (ans+=2)
-                });
+                ans += 2;
                 break;
             case "1":
-                scoresRef.update({
-                    "a2": (ans+=4)
-                });
+                ans += 4;
                 break;
             case "2":
-                scoresRef.update({
-                    "a3": (ans+=6)
-                });
+                ans += 6;
                 break;
             case "3":
-                scoresRef.update({
-                    "a4": (ans+=8)
-                });
+                ans += 8;
                 break;
             case "4":
-                scoresRef.update({
-                    "a5": (ans+=10)
-                });
+                ans += 10;
                 break;
         }
+        scoresRef.update({
+            "a2": ans
+        });
         //網頁點擊次數計算
         clicksRef.update({
             "q2": true
@@ -61,20 +55,23 @@ $(document).ready(function() {
     }
 
     function leaveHere(){
-        //播放離開特效：依序淡出
+        //播放離開特效：亮光淡入、再跟情境圖的其他地方一起依序淡出
         setTimeout(function() {
-            $(".main-content-word").fadeTo(1000, 0);
+            $(".main-content-scene-light").fadeTo(700, 1);
         }, 500);
         setTimeout(function() {
-            $(".main-content-scene").fadeTo(1000, 0);
-        }, 1000);
+            $(".main-content-word").fadeTo(1000, 0);
+        }, 1500);
         setTimeout(function() {
-            $(".main-progress").fadeTo(1000, 0);
+            $(".main-content-scene").fadeTo(1000, 0);
         }, 2000);
+        setTimeout(function() {
+            $(".main-progress").fadeTo(500, 0);
+        }, 3000);
         //前往下一頁
         setTimeout(function() {
             window.location.href = "test3.html";
-        }, 2500);
+        }, 3500);
     }
 
     document.querySelector("#id1").addEventListener("click", function(){ addScoreAndClick("0"); leaveHere(); });

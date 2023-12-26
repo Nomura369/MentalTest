@@ -1,7 +1,7 @@
 /*字體引入區(思源宋體)*/
 @font-face {
     font-family: 'Source Han Serif TC';
-    src: url('fonts/SourceHanSerifTC-Regular.otf');
+    src: url('../fonts/SourceHanSerifTC-Regular.otf');
 }
 
 
@@ -196,6 +196,8 @@ body {
     color: white;
     margin: 0; /*清除<p>的預設格式*/
 }
+
+
 
 /*RWD設定之桌機first*/
 @media (max-width: 1200px){ /*筆電格式*/

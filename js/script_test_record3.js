@@ -1,39 +1,83 @@
-//得先執行的部分
-let clickTime = localStorage.getItem("2page"); //取得該頁面按鈕被點擊的次數，此時裡面存的是字串
-clickTime = parseInt(clickTime); //轉換為數字，方便之後的計算
+$(document).ready(function() {
+    //Firebase初始化
+    firebase.initializeApp({
+        apiKey: "AIzaSyCH5c_zQVDfln4wmzVb6Pr56y8UgD3NsHM",
+        authDomain: "mentaltest-1ceda.firebaseapp.com",
+        projectId: "mentaltest-1ceda",
+        storageBucket: "mentaltest-1ceda.appspot.com",
+        messagingSenderId: "684988781392",
+        appId: "1:684988781392:web:127966dd6653a89c165255"
+      });
 
-//判斷該頁面的選項是否被點擊過
-    //不用擔心事件監聽器的問題，因為這裡主要是判斷上次頁面留下的click次數
-    //一頁限定只存入一筆資料
-    //這頁被點擊過 => 刪除原先輸入的資料(等等怎麼刪www)
+    let db = firebase.firestore(); //宣告資料庫物件
+    let scoresRef = db.collection("scores").doc("default");
+    let clicksRef = db.collection("clicks").doc("default");
 
-if(clickTime == 1){ 
-    alert("不好意思，目前還沒辦法重新選擇選項，系統將自動帶您回到剛才的頁面"); /*沒有回傳值*/
-    window.history.forward();
-    //因為會自行跳轉，所以不用再添加其他設定
-}
+    //先檢查該網頁的選項是否被點擊過
+    /*clicksRef.get().then(function(doc){ //doc為取得的資料
+      if(doc.data().q3 == true){
+        alert("不好意思，上一題無法重新作答喔，系統將自動回到剛才的頁面"); //沒有回傳值
+        window.history.forward();
+      }
+    })*/
 
+    //主程式：監聽按鈕並計算分數與網頁點擊次數、播放離開特效、轉至其他頁面
+    function addScoreAndClick(index){
+        //分數計算（從資料庫裡拿紀錄再將更新過的傳回去）
+        let ans = 0;
+        scoresRef.get().then(function(doc){
+            ans = doc.data().a3; //紀錄第三題使用者選的選項
+        });
+        switch(index){
+            case "0":
+                ans += 2;
+                break;
+            case "1":
+                ans += 4;
+                break;
+            case "2":
+                ans += 6;
+                break;
+            case "3":
+                ans += 8;
+                break;
+            case "4":
+                ans += 10;
+                break;
+        }
+        scoresRef.update({
+            "a3": ans
+        });
+        //網頁點擊次數計算
+        clicksRef.update({
+            "q3": true
+        });
+    }
 
-//函式宣告區
-function addScore(index){  
-    let score = localStorage.getItem(index); //取得該選項目前被點選的次數，此時裡面存的是字串
-    score = parseInt(score); //轉換為數字，方便之後的計算  
-    score++;
-    localStorage.setItem(index, score.toString()); //把結果傳回去
-}
+    function leaveHere(){
+        //播放離開特效：依序淡出
+        setTimeout(function() {
+            $(".main-content-word").fadeTo(1000, 0);
+        }, 500);
+        setTimeout(function() {
+            $(".main-content-scene").fadeTo(1000, 0);
+        }, 1000);
+        setTimeout(function() {
+            $(".main-progress").fadeTo(500, 0);
+        }, 2000);
+        //前往下一頁
+        setTimeout(function() {
+            window.location.href = "test4.html";
+        }, 2500);
+    }
 
-function addClickTime(){
-    clickTime++; 
-    localStorage.setItem("2page", clickTime.toString()); //把結果傳回去(剛才很蠢地忘記這麼做) 
-}
-
-
-//主程式區
-document.querySelector("#id1").addEventListener("click", function(){ addScore("0"); addClickTime(); });
-document.querySelector("#id2").addEventListener("click", function(){ addScore("1"); addClickTime(); });
-document.querySelector("#id3").addEventListener("click", function(){ addScore("2"); addClickTime(); });
-document.querySelector("#id4").addEventListener("click", function(){ addScore("3"); addClickTime(); });
-document.querySelector("#id5").addEventListener("click", function(){ addScore("4"); addClickTime(); });
+    document.querySelector("#id1").addEventListener("click", function(){ addScoreAndClick("0"); leaveHere(); });
+    document.querySelector("#id2").addEventListener("click", function(){ addScoreAndClick("1"); leaveHere(); });
+    document.querySelector("#id3").addEventListener("click", function(){ addScoreAndClick("2"); leaveHere(); });
+    document.querySelector("#id4").addEventListener("click", function(){ addScoreAndClick("3"); leaveHere(); });
+    document.querySelector("#id5").addEventListener("click", function(){ addScoreAndClick("4"); leaveHere(); });
+    
+});
 
 
 

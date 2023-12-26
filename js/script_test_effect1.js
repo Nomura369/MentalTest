@@ -12,9 +12,9 @@ $(document).ready(function() {
     let whetherPlayed = false;
     function sceneAnimation(){
         // 獲取當前滾動位置，若下滑超過特定位置則播放動畫（僅限一次）
+        let card = document.querySelector(".main-content-scene-card");
         if(window.matchMedia("(max-width: 768px)").matches){
             if(window.scrollY >= 100 && whetherPlayed == false){
-                let card = document.querySelector(".main-content-scene-card");
                 setTimeout(function() {
                     card.setAttribute("src", "images/scene1_card2.png");
                 }, 500);
@@ -29,7 +29,6 @@ $(document).ready(function() {
             }
         }else {
             if(window.scrollY >= 250 && whetherPlayed == false){
-                let card = document.querySelector(".main-content-scene-card");
                 setTimeout(function() {
                     card.setAttribute("src", "images/scene1_card2.png");
                 }, 500);
