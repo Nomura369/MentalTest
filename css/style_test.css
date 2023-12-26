@@ -117,7 +117,7 @@ body {
     left: 0;
 }
 
-.main-content-scene-light { /*第二題和第三題都有*/
+.main-content-scene-light { /*第二題、第三題和第四題都有*/
     opacity: 0; /*(離場前)淡入用*/
     position: absolute;
     left: 0;
@@ -145,6 +145,30 @@ body {
     left: 0;
 }
 .main-content-scene-food4 {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+
+/*第四題*/
+.main-content-scene-singer {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+.main-content-scene-people1 {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+.main-content-scene-people2 {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+
+/*第五題*/
+.main-content-scene-gift {
     opacity: 0; /*淡入用*/
     position: absolute;
     left: 0;
@@ -301,6 +325,14 @@ body {
     background-color: #77514A;
 }
 
+.dot4:before {
+    background-color: #B9A672;
+}
+
+.dot5:before {
+    background-color: #938479;
+}
+
 .option-button .option-button-dot:before { /*點點本身的樣式設定*/
     content: "";
     top: 0;
@@ -423,6 +455,22 @@ body {
         width: 400px;
         height: 560px;
     }
+    .main-content-scene-singer {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-people1 {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-people2 {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-gift {
+        width: 400px;
+        height: 560px;
+    }
      /*情境圖差分終點*/
     .topic {
         font-size: 1.5em; 
@@ -508,6 +556,22 @@ body {
         width: 300px;
         height: 420px;
     }
+    .main-content-scene-singer {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-people1 {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-people2 {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-gift {
+        width: 300px;
+        height: 420px;
+    }
      /*情境圖差分終點*/
     .main-content-word {
         margin-left: 30px;
@@ -574,6 +638,22 @@ body {
         height: 350px;
     }
     .main-content-scene-food4 {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-singer {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-people1 {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-people2 {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-gift {
         width: 250px;
         height: 350px;
     }

@@ -3,56 +3,120 @@
     <head>
         <meta charset="utf-8">
         <title>第五題</title>
+        <!--RWD設定-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--CSS引入區-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
-        <link href="style_test.css" rel="stylesheet">
-        <!--如果其他題的格式都一樣，其實可以引入同個css-->
-        <!--以下為字體引入區(NotoSans-Regular)-->
+        <link href="css/style_test.css" rel="stylesheet"><!--如果其他題的格式都一樣，其實可以引入同個css-->
+        <!--字體引入區(Kranky)--><!--思源宋體的引入寫在CSS-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
         <!--js與jQuery引入區-->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="script_test_effect.js"></script>
+        <script src="js/script_test_effect5.js"></script>
+        <!--Firebase函式庫引入區-->
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+        <script src="js/script_test_record5.js"></script>
     </head>
 
     <body>
         <div class="container">
-            <!--header先打起來放-->
-            <header class="header"></header>
+            <header class="header">
+                <a class="header-home" href="index.html">
+                    <img class="header-home-icon" src="images/home_icon_normal.png" alt="homepage">
+                </a>
+            </header>
 
             <article class="main">
-                <div class="main-scene">
-                    <img class="main-scene-image" src="images/scene5.png" alt="情境圖">
-                </div>
+                <img class="main-progress" src="images/progress5.png" alt="progress3">
                 <div class="main-content">
-                    <p class="main-content-topic">天下無不散的宴席，這場愉快的茶會即將落幕，主辦人——聖誕老公公為了感謝你的參與，送給在場的與會者們一份包裝很精緻的禮物，你認為裡面會是？</p>
-                    <div class="main-content-option">
-                        <a class="main-content-option-link btn5" id="id1" href="loading.html">
-                            <p class="main-content-option-link-caption">雪景插畫明信片</p>
-                        </a>
-                        <a class="main-content-option-link btn5" id="id2" href="loading.html">
-                            <p class="main-content-option-link-caption">眾人燦笑的合影</p>
-                        </a>
-                        <a class="main-content-option-link btn5" id="id3" href="loading.html">
-                            <p class="main-content-option-link-caption">簡約實用的鋼筆</p>
-                        </a>
-                        <a class="main-content-option-link btn5" id="id4" href="loading.html">
-                            <p class="main-content-option-link-caption">蘊含魔力的水晶吊墜</p>
-                        </a>
-                        <a class="main-content-option-link btn5" id="id5" href="loading.html">
-                            <p class="main-content-option-link-caption">氣質高貴的胸針</p>
-                        </a>
+                    <div class="main-content-scene">
+                        <img class="main-content-scene-image" src="images/scene5.png" alt="情境圖">
+                        <img class="main-content-scene-gift" src="images/scene5_gift.png" alt="禮物">
+                        <!--因為情境圖會做動畫，所以可能會多幾個新類別-->
+                    </div>
+                    <div class="main-content-word">
+                        <p class="topic">天下無不散的宴席，這場愉快的茶會即將落幕，主辦人——聖誕老公公為了感謝你的參與，送給在場的與會者們一份包裝很精緻的禮物，你認為裡面會是？</p>
+                        <div class="option">
+                            <div class="option-button">
+                                <!--按鈕的點擊特效用-->
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <!--btn系列類別是用來設定hover的，而id則是用來計分的-->
+                                <a class="option-button-link btn5" id="id1">雪景插畫明信片</a>
+                            </div>
+                            <div class="option-button">
+                                <!--按鈕的點擊特效用-->
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <!--btn系列類別是用來設定hover的，而id則是用來計分的-->
+                                <a class="option-button-link btn5" id="id2">眾人燦笑的合影</a>
+                            </div>
+                            <div class="option-button">
+                                <!--按鈕的點擊特效用-->
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <!--btn系列類別是用來設定hover的，而id則是用來計分的-->
+                                <a class="option-button-link btn5" id="id3">簡約實用的鋼筆</a>
+                            </div>
+                            <div class="option-button">
+                                <!--按鈕的點擊特效用-->
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <!--btn系列類別是用來設定hover的，而id則是用來計分的-->
+                                <a class="option-button-link btn5" id="id4">蘊含魔力的水晶吊墜</a>
+                            </div>
+                            <div class="option-button">
+                                <!--按鈕的點擊特效用-->
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <span class="option-button-dot dot5"></span>
+                                <!--btn系列類別是用來設定hover的，而id則是用來計分的-->
+                                <a class="option-button-link btn5" id="id5">氣質高貴的胸針</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
 
             <footer class="footer">
-                <!--內容為暫定-->
-                <p class="footer-content">&copy;趣味性心理測驗</p>
+                <div class="footer-logo">
+                    <img class="footer-logo-image" src="images/logo.png" alt="logo">
+                    <p class="footer-logo-word">J&J Lab.</p>
+                </div>
             </footer>
-
-            <!--未包含jQuery的js引入區-->
-            <script src="script_test_record5.js"></script>
         </div>
     </body>
 </html>

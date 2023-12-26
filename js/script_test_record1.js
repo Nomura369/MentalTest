@@ -14,12 +14,16 @@ $(document).ready(function() {
     let clicksRef = db.collection("clicks").doc("default");
 
     //先檢查該網頁的選項是否被點擊過
-    /*clicksRef.get().then(function(doc){ //doc為取得的資料
+    clicksRef.get().then(function(doc){ //doc為取得的資料
       if(doc.data().q1 == true){
-        alert("不好意思，上一題無法重新作答喔，系統將自動回到剛才的頁面"); //沒有回傳值
-        window.history.forward();
+        scoresRef.update({
+            "a1": 0
+        });
+        clicksRef.update({
+            "q1": false
+        });
       }
-    })*/
+    });
 
     //主程式：監聽按鈕並計算分數與網頁點擊次數、播放離開特效、轉至其他頁面
     function addScoreAndClick(index){
