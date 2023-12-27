@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Source Han Serif TC';
+    src: url('../fonts/SourceHanSerifTC-Regular.otf');
+}
+
+html{
+    box-sizing: border-box; /*預設是cotent-box*/
+    background-color:#47403b;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 100%; /*16px，寫一下比較安心*/
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-image {
+
+}
+
+.loading-word {
+    width: 150px;
+    color: #fff;
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    text-wrap: nowrap;
+}
+
+.loading-word .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+div{
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -150px 0 0 -75px;
+}
+
+
+
+/*RWD設定之桌機first*/
+@media (max-width: 1200px){ /*筆電格式*/
+    
+}
+
+@media (max-width: 992px) { /*介於筆電和平板中間*/
+    
+}
+
+@media (max-width: 780px){ /*平板格式*/
+    
+}
+
+@media (max-width: 576px){ /*手機格式*/
+    .loading-image {
+        width: 100px;
+        height: 100px;
+    }
+    .loading-word {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 400px){ /*更小的手機格式*/
+    
+}

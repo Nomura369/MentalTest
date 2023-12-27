@@ -1,20 +1,26 @@
-<!--讓最終分數得以計算的過渡頁-->
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <title>結果產生中</title>
+        <title>Loading...</title>
+        <!--RWD設定-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--CSS引入區-->
         <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
-        <!--<link href="style.css" rel="stylesheet">-->
-        <!--以下為字體引入區(NotoSans-Regular)-->
-
-        <!--js與jQuery引入區-->
-
+        <link rel="stylesheet" href="css/style_loading.css"><!--思源宋體的引入寫在CSS-->
+        <!--Firebase函式庫引入區-->
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
     </head>
 
     <body>
+        <div class="loading">
+            <img class="loading-image" src="images/stars.gif" alt="星星">
+            <h1 class="loading-word">Loading...</h1>
+        </div>
 
-        <!--未包含jQuery的js引入區-->
-        <script src="script_test_record.js"></script>
+        <!--js引入區-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+        <script src="js/script_loading.js"></script>
     </body>
 </html>

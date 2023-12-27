@@ -1,25 +1,12 @@
+/*字體引入區(思源宋體)*/
+@font-face {
+    font-family: 'Source Han Serif TC';
+    src: url('../fonts/SourceHanSerifTC-Regular.otf');
+}
+
 html {
     box-sizing: border-box; /*預設是cotent-box*/
-}
-
-#background1 {
-    background-color: #A7A7A7;
-}
-
-#background2 {
-    background-color: #678176;
-}
-
-#background3 {
-    background-color: #9F8A7D;
-}
-
-#background4 {
-    background-color: #B9A672;
-}
-
-#background5 {
-    background-color: #946E67;
+    background-color: #837871;
 }
 
 *, *:before, *:after {
@@ -27,7 +14,7 @@ html {
 }
 
 body {
-    font-size: 100%; /*不知道有沒有必要，但還是寫一下*/
+    font-size: 100%; /*16px，寫一下比較安心*/
 }
 
 .container {

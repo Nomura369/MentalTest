@@ -1,50 +1,75 @@
 <!DOCTYPE html>
-<html id="background1">
+<html>
     <head>
         <meta charset="utf-8">
         <title>你的聖誕角色是</title>
+        <!--RWD設定-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--CSS引入區-->
         <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
-        <link href="style_result.css" rel="stylesheet">
-        <!--如果其他結果的格式都一樣，其實可以引入同個css，不一樣的地方直接在html改-->
-        <!--以下為字體引入區(NotoSans-Regular)-->
+        <link href="css/style_result.css" rel="stylesheet">
+        <!--字體引入區(Kranky)--><!--思源宋體的引入寫在CSS-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
         <!--js與jQuery引入區-->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="script.js"></script>
+        <script src="js/script_result.js"></script>
     </head>
 
     <body>
         <div class="container">
-            <header class="header">
-                <p class="header-title" id="header1">測驗結果</p>
-            </header>
-
-            <div class="middle">
-                <article class="main">
-                    <img class="main-image" src="images/snowman.png" alt="雪人">
-                    <div class="main-content">
-                        <p class="main-content-result">你的聖誕角色是【雪人】！<br><br>
-                            你來自北方遙遠的雪國，帶著一絲好奇心參加了這場茶會，長年待在冰天雪地的環境使你不太習慣這場熱絡的聚會，選擇當個透明人默默在一旁享用茶點觀察大家。</p>
-                        <div class="main-content-bless">
-                            <p class="main-content-bless-word">結果僅供參考，感謝您的參與！祝您有個美好的平安夜</p>
-                            <img class="main-content-bless-image" src="images/emoji.png" alt="微笑">
-                        </div>
-                    </div>
-                </article>
-            
-                <!--按鈕放在<article>外面喔-->
-                <div class="button">
-                    <p class="button-content">
-                        <a class="button-content-link btn1" href="index.html">返回測驗</a>
-                    </p>
+            <!--沒有header-->
+            <article class="main">
+                <p class="main-title">測驗結果</p>
+                <div class="main-subtitle">
+                    <img class="main-subtitle-line" src="" alt="左邊的線">
+                    <p class="main-subtitle-word">你的聖誕角色是</p>
+                    <img class="main-subtitle-line" src="" alt="右邊的線">
                 </div>
-            </div>
+                <div class="main-card">
+                    <img class="main-card-image" src="" alt="雪人">
+                    <div class="main-card-content">
+                        <p class="main-card-content-topic">【雪人】</p>
+                        <p class="main-card-content-word">你來自北方遙遠的雪國，帶著一絲好奇心參加了這場茶會，長年待在冰天雪地的環境使你不太習慣這場熱絡的聚會，選擇當個透明人默默在一旁享用茶點觀察大家。</p>
+                    </div>
+                </div>
+                <p class="main-bless">※結果僅供參考，感謝您的參與！祝您有個美好的平安夜※</p>
+                <div class="main-buttons">
+                    <!--hover和傳送頁面的功能預計寫在js裡-->
+                    <a class="main-buttons-link">
+                        <img class="main-buttons-link-image" src="" alt="角色圖鑑">
+                        <p class="main-buttons-link-word">角色圖鑑</p>
+                    </a>
+                    <a class="main-buttons-link">
+                        <img class="main-buttons-link-image" src="" alt="下載結果">
+                        <p class="main-buttons-link-word">下載結果</p>
+                    </a>
+                </div>
+                <a class="main-homebutton" href="index.html">返回測驗</a>
+            </article>
 
             <footer class="footer">
-                <!--內容為暫定-->
-                <p class="footer-content">&copy;趣味性心理測驗</p>
+                <div class="footer-logo">
+                    <img class="footer-logo-image" src="images/logo.png" alt="logo">
+                    <p class="footer-logo-word">J&J Lab.</p>
+                </div>
+                <div class="footer-infor">
+                    <p class="footer-infor-about">About us</p>
+                    <img class="footer-infor-line" src="" alt="區隔用直線">
+                    <div class="footer-infor-sns">
+                        <a class="footer-infor-sns-link" href="">
+                            <img class="footer-infor-sns-link-image">
+                        </a>
+                        <a class="footer-infor-sns-link" href="">
+                            <img class="footer-infor-sns-link-image">
+                        </a>
+                        <a class="footer-infor-sns-link" href="">
+                            <img class="footer-infor-sns-link-image">
+                        </a>
+                    </div>
+                    <p class="footer-infor-copyright">Copyright&copy;2023 J&J Lab.All rights reserved.</p>
+                </div>
             </footer>
         </div>
     </body>

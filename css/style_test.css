@@ -21,7 +21,7 @@ html {
 }
 
 body {
-    font-size: 100%; /*不知道有沒有必要，但還是寫一下*/
+    font-size: 100%; /*16px，寫一下比較安心*/
 }
 
 .container {
