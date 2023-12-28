@@ -1,0 +1,302 @@
+/*字體引入區(思源宋體)*/
+@font-face {
+    font-family: 'Source Han Serif TC';
+    src: url('../fonts/SourceHanSerifTC-Regular.otf');
+}
+
+html {
+    box-sizing: border-box; /*預設是cotent-box*/
+    background-color: #968282;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 100%; /*16px，寫一下比較安心*/
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh; /*縮放時頁面最小會維持滿版*/
+}
+
+.header {
+    background-color: #301010;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-home {
+    
+}
+
+.header-home-icon {
+    margin: 10px 0 10px 63px;
+}
+
+.header-back {
+
+}
+
+.header-back-icon {
+    margin: 10px 63px 10px 0;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center; /*置中效果*/
+}
+
+.main-title {
+    opacity: 0; /*淡入用*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    max-width: 100%;
+
+    background-color: #5A3434;
+    padding-top: 28px;
+    padding-bottom: 28px;
+}
+
+.main-title-line {
+    
+}
+
+.main-title-words {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-title-word {
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 2.5em; /*40px*/
+    font-weight: 700;
+    color: #F6EDE4;
+    text-shadow: 4px 4px 2px #502626;
+
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.main-subtitle {
+    opacity: 0; /*淡入用*/
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 1.25em; /*20px*/
+    font-weight: 700;
+    color: #C0B4B4;
+    letter-spacing: 7px;
+
+    margin-top: 21px;
+    margin-bottom: 42px;
+}
+
+.main-chara {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-chara-infor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 31px;
+    margin-right: 31px; 
+}
+
+.main-chara-infor-image {
+    opacity: 0; /*淡入用*/
+    width: 184px;
+    height: 184px;
+    background-color: #BBACAC;
+    padding: 23px;
+    border: 3px solid #BBACAC;
+    border-radius: 50%;
+}
+
+/*角色圖特效起點*/
+
+/*角色圖特效終點*/
+
+
+.main-chara-infor-content {
+    opacity: 0; /*角色介紹用*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-background {
+    position: relative;
+    margin-bottom: 36px;
+}
+
+.content-explain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    width: 150px;
+    height: 200px;
+
+    position: absolute;
+
+}
+
+.content-explain-topic {
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 1.25em; /*20px*/
+    font-weight: 600;
+    color: #4D433C;
+
+    margin-top: 60px;
+    margin-bottom: 12px;
+}
+
+.content-explain-word {
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 1em;
+    font-weight: 600;
+    color: #4D433C;
+
+    margin: 0;
+}
+
+.footer {
+    background-color: #301010;
+    width: 100%; /*與父元件(相當於網頁本身)寬度相同*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-top: 30px;
+    margin-bottom: 16px;
+    
+    /*使logo的圖片與文字置中*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo-image {
+    
+}
+
+.footer-logo-word {
+    font-family: 'Kranky', serif;
+    font-size: 1.5em; /*24px*/
+    color: white;
+    margin: 0; /*清除<p>的預設格式*/
+}
+
+.footer-infor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-infor-about {
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+    margin: 0; /*清除<p>的預設格式*/
+    margin-bottom: 4px;
+
+    position: relative;
+}
+
+.underline {
+
+}
+
+.footer-infor-about.underline::before{
+    content:"";
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: -15%;
+    height: 1px;
+    background-color: white;
+    transition: all .3s ease-in-out;
+ }
+
+ .footer-infor-about.underline:hover::before{
+    right: 0;
+    left: 0;
+ }
+
+ .footer-infor-about:active {
+    color: #837871;
+ }
+
+ .underline:active::before {
+    background-color: #837871;
+    transition: none;
+ }
+
+ .footer-infor-line {
+    height: 30px;
+    margin-left: 12px;
+    margin-right: 10.5px;
+ }
+
+.footer-infor-sns {
+    
+}
+
+.footer-infor-sns-link {
+    text-decoration: none;
+}
+
+.footer-infor-sns-link-image {
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+}
+
+.footer-copyright {
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 1.2em;
+    color: #E5DFDF;
+    margin: 8px 0 27px 0; /*清除<p>的預設格式*/
+}
+
+
+/*RWD設定之桌機first*/
+@media (max-width: 1200px){ /*筆電格式*/
+    
+}
+
+@media (max-width: 992px) { /*介於筆電和平板中間*/
+    
+}
+
+@media (max-width: 780px){ /*平板格式*/
+    
+}
+
+@media (max-width: 576px){ /*手機格式*/
+    
+}
+
+@media (max-width: 400px){ /*更小的手機格式*/
+    
+}
+
