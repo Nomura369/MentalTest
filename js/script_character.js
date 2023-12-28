@@ -24,6 +24,9 @@ $(document).ready(function() {
     back.addEventListener("mouseout", function(){
         back.setAttribute("src", "images/back_icon_normal.png");
     });
+    back.addEventListener("click", function(){
+        window.history.forward();
+    });
 
     //角色圖的hover效果
     let chara1 = document.querySelector(".chara1");
