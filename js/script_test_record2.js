@@ -59,23 +59,20 @@ $(document).ready(function() {
     }
 
     function leaveHere(){
-        //播放離開特效：亮光淡入、再跟情境圖的其他地方一起依序淡出
-        setTimeout(function() {
-            $(".main-content-scene-light").fadeTo(700, 1);
-        }, 500);
+        //播放離開特效：依序淡出
         setTimeout(function() {
             $(".main-content-word").fadeTo(1000, 0);
-        }, 1500);
+        }, 500);
         setTimeout(function() {
             $(".main-content-scene").fadeTo(1000, 0);
-        }, 2000);
+        }, 1000);
         setTimeout(function() {
             $(".main-progress").fadeTo(500, 0);
-        }, 3000);
+        }, 2000);
         //前往下一頁
         setTimeout(function() {
             window.location.href = "test3.html";
-        }, 3500);
+        }, 2500);
     }
 
     document.querySelector("#id1").addEventListener("click", function(){ addScoreAndClick("0"); leaveHere(); });
