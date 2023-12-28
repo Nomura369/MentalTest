@@ -118,7 +118,7 @@ body {
 }
 
 .main-content-scene-light { /*第二題、第三題和第四題都有*/
-    opacity: 0; /*(離場前)淡入用*/
+    opacity: 0; /*淡入用*/
     position: absolute;
     left: 0;
 }

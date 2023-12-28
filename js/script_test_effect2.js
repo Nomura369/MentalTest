@@ -28,6 +28,12 @@ $(document).ready(function() {
                     sled.classList.add("animate__animated");
                     sled.classList.add("animate__bounceIn");
                 }, 2000);
+                setTimeout(function() {
+                    $(".main-content-scene-light").fadeTo(1000, 1);
+                }, 2500);
+                setTimeout(function() {
+                    $(".main-content-scene-light").fadeTo(1000, 0);
+                }, 3500);
                 
                 whetherPlayed = true;
             }
@@ -42,7 +48,14 @@ $(document).ready(function() {
                     star2.classList.add("animate__flash");
                     sled.classList.add("animate__animated");
                     sled.classList.add("animate__bounceIn");
+                    $(".main-content-scene-light").fadeTo(1000, 1);
                 }, 2000);
+                setTimeout(function() {
+                    $(".main-content-scene-light").fadeTo(1000, 1);
+                }, 2500);
+                setTimeout(function() {
+                    $(".main-content-scene-light").fadeTo(1000, 0);
+                }, 3500);
                 
                 whetherPlayed = true;
             }
