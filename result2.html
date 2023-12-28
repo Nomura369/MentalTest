@@ -1,50 +1,90 @@
 <!DOCTYPE html>
-<html id="background2">
+<html>
     <head>
         <meta charset="utf-8">
         <title>你的聖誕角色是</title>
+        <!--RWD設定-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--CSS引入區-->
         <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
-        <link href="style_result.css" rel="stylesheet">
-        <!--與其它結果引入同個css，不一樣的地方直接在html改-->
-        <!--以下為字體引入區(NotoSans-Regular)-->
+        <link href="css/style_result.css" rel="stylesheet">
+        <!--字體引入區(Kranky)--><!--思源宋體的引入寫在CSS-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
         <!--js與jQuery引入區-->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="script.js"></script>
+        <script src="js/script_result.js"></script>
     </head>
 
     <body>
         <div class="container">
-            <header class="header">
-                <p class="header-title" id="header2">測驗結果</p>
-            </header>
-
-            <div class="middle">
-                <article class="main">
-                    <img class="main-image" src="images/santaClaus.png" alt="聖誕老公公">
-                    <div class="main-content">
-                        <p class="main-content-result">你的聖誕角色是【聖誕老公公】！<br><br>
-                            你的個性慷慨大方、樂於分享，喜歡召集朋友齊聚一堂。而且擁有強大的領導氣質和社交能力，經常毛遂自薦當領頭羊。</p>
-                        <div class="main-content-bless">
-                            <p class="main-content-bless-word">結果僅供參考，感謝您的參與！祝您有個美好的平安夜</p>
-                            <img class="main-content-bless-image" src="images/emoji.png" alt="微笑">
-                        </div>
-                    </div>
-                </article>
-                
-                <!--按鈕放在<article>外面喔-->
-                <div class="button">
-                    <p class="button-content">
-                        <a class="button-content-link btn2" href="index.html">返回測驗</a>
-                    </p>
+            <!--沒有header-->
+            <article class="main">
+                <div class="main-title">
+                    <span class="main-title-word">測</span>
+                    <span class="main-title-word">試</span>
+                    <span class="main-title-word">結</span>
+                    <span class="main-title-word">果</span>
                 </div>
-            </div>
+                <div class="main-subtitle">
+                    <img class="main-subtitle-line" src="images/subtitle_line.png" alt="副標題線">
+                    <span class="main-subtitle-word">你的聖誕角色是</span>
+                </div>
+                <div class="main-card">
+                    <img class="main-card-image" src="images/santaClaus.png" alt="聖誕老公公">
+                    <div class="main-card-content">
+                        <p class="main-card-content-topic">【聖誕老公公】</p>
+                        <p class="main-card-content-word">你的個性慷慨大方、樂於分享，喜歡召集朋友齊聚一堂。而且擁有強大的領導氣質和社交能力，經常毛遂自薦當領頭羊。</p>
+                    </div>
+                </div>
+                <p class="main-bless">※結果僅供參考，感謝您的參與！祝您有個美好的平安夜※</p>
+                <div class="main-buttons">
+                    <!--hover和傳送頁面的功能預計寫在js裡-->
+                    <a class="main-buttons-link">
+                        <img class="main-buttons-link-image" id="book-image" src="images/book_normal.png" alt="角色圖鑑">
+                        <p class="main-buttons-link-word" id="book-word">角色圖鑑</p>
+                    </a>
+                    <a class="main-buttons-link" href="images/result2.png" download>
+                        <img class="main-buttons-link-image" id="download-image" src="images/download_normal.png" alt="下載結果">
+                        <p class="main-buttons-link-word" id="download-word">下載結果</p>
+                    </a>
+                </div>
+                <!--按鈕的點擊特效用-->
+                <div class="main-homebutton">
+                    <span class="main-homebutton-dot dot2"></span>
+                    <span class="main-homebutton-dot dot2"></span>
+                    <span class="main-homebutton-dot dot2"></span>
+                    <span class="main-homebutton-dot dot2"></span>
+                    <span class="main-homebutton-dot dot2"></span>
+                    <span class="main-homebutton-dot dot2"></span>
+                    <span class="main-homebutton-dot dot2"></span>
+                    <span class="main-homebutton-dot dot2"></span>
+                    <a class="main-homebutton-link btn2" href="index.html">返回測驗</a>
+                </div>
+            </article>
 
             <footer class="footer">
-                <!--內容為暫定-->
-                <p class="footer-content">&copy;趣味性心理測驗</p>
+                <div class="footer-logo">
+                    <img class="footer-logo-image" src="images/logo.png" alt="logo">
+                    <p class="footer-logo-word">J&J Lab.</p>
+                </div>
+                <div class="footer-infor">
+                    <a class="footer-infor-about underline" href="#">About us</a>
+                    <img class="footer-infor-line" src="images/footer_line.png" alt="區隔用直線">
+                    <div class="footer-infor-sns">
+                        <a class="footer-infor-sns-link" href="#">
+                            <img class="footer-infor-sns-link-image" id="fb" src="images/facebook_normal.png" alt="fb">
+                        </a>
+                        <a class="footer-infor-sns-link" href="#">
+                            <img class="footer-infor-sns-link-image" id="ig" src="images/instagram_normal.png" alt="ig">
+                        </a>
+                        <a class="footer-infor-sns-link" href="#">
+                            <img class="footer-infor-sns-link-image" id="x" src="images/twitter_normal.png" alt="x">
+                        </a>
+                    </div>
+                </div>
+                <p class="footer-copyright">Copyright&copy;2023 J&J Lab.All rights reserved.</p>
             </footer>
         </div>
     </body>

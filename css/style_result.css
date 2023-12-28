@@ -94,7 +94,7 @@ body {
 }
 
 .main-card-image {
-    margin-right: 26px;
+    margin-right: 40px;
 }
 
 .main-card-content {
@@ -282,19 +282,19 @@ body {
 }
 
 .dot2:before {
-    background-color: #A7A7A7;
+    background-color: #41524B;
 }
 
 .dot3:before {
-    background-color: #77514A;
+    background-color: #4D433C;
 }
 
 .dot4:before {
-    background-color: #B9A672;
+    background-color: #685C3A;
 }
 
 .dot5:before {
-    background-color: #938479;
+    background-color: #60423C;
 }
 
 .main-homebutton .main-homebutton-dot:before { /*點點本身的樣式設定*/
