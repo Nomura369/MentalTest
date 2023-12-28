@@ -1,7 +1,7 @@
 /*字體引入區(思源宋體)*/
 @font-face {
     font-family: 'Source Han Serif TC';
-    src: url('fonts/SourceHanSerifTC-Regular.otf');
+    src: url('../fonts/SourceHanSerifTC-Regular.otf');
 }
 
 
@@ -84,10 +84,6 @@ body {
 }
 
 /*按鈕點擊特效之起點*/
-.main-button-link:active {
-    box-shadow: 0 8px 10px #534943;
-}
-
 .main-button-dot { /*點點的軌道設置*/
     position: absolute; /*基準設在按鈕(連結)上*/
     z-index: 0;
@@ -178,10 +174,14 @@ body {
 .footer {
     background-color: #332B26;
     width: 100%; /*與父元件(相當於網頁本身)寬度相同*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-logo {
-    margin-top: 30px;
+    margin-top: 41px;
     margin-bottom: 28px;
     
     /*使logo的圖片與文字置中*/
@@ -191,15 +191,17 @@ body {
 }
 
 .footer-logo-image {
-    margin-bottom: 11px;
+    
 }
 
 .footer-logo-word {
     font-family: 'Kranky', serif;
-    font-size: 1.25em; /*20px*/
+    font-size: 1.5em; /*24px*/
     color: white;
     margin: 0; /*清除<p>的預設格式*/
 }
+
+
 
 /*RWD設定之桌機first*/
 @media (max-width: 1200px){ /*筆電格式*/
@@ -214,6 +216,20 @@ body {
         offset-distance: 35%;
     }
 }
+
+@media (max-width: 992px) { /*介於筆電和平板中間*/
+    .main-button {
+        bottom: 4.25%;
+    }
+    .main-button-link {
+        font-size: 1.55em;
+        padding: 16.5px 79.5px 16.5px 72.5px; /*因為需要對齊所以上下、左右的值不同*/
+    }
+    .main-button .main-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 30%;
+    }
+}
+
 @media (max-width: 780px){ /*平板格式*/
     .main-button {
         bottom: 4%; 
@@ -226,22 +242,23 @@ body {
         offset-distance: 25%;
     }
 }
+
 @media (max-width: 576px){ /*手機格式*/
     .main-button {
-        bottom: 3%; 
+        bottom: 3.5%; 
     }
     .main-button-link {
         font-size: 1em;
         padding: 11px 50px 11px 46px; /*因為需要對齊所以上下、左右的值不同*/
     }
     .main-button .main-button-dot:before { /*點點本身的樣式設定*/
-        offset-distance: 15%;
+        offset-distance: 10%;
     }
 }
 
-@media (max-width: 360px){ /*更小的手機格式*/
+@media (max-width: 400px){ /*更小的手機格式*/
     .main-button {
-        bottom: 2.5%; 
+        bottom: 3%; 
     }
     .main-button-link {
         font-size: 0.8em;
@@ -249,5 +266,15 @@ body {
     }
     .main-button .main-button-dot:before { /*點點本身的樣式設定*/
         offset-distance: 15%;
+    }
+    .footer-logo {
+        margin-top: 26px;
+    }
+    .footer-logo-image {
+        width: 40px;
+        height: 40px;
+    }
+    .footer-logo-word {
+        font-size: 1.25em; /*20px*/
     }
 }

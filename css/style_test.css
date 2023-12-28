@@ -1,0 +1,691 @@
+/*字體引入區(思源宋體)*/
+@font-face {
+    font-family: 'Source Han Serif TC';
+    src: url('../fonts/SourceHanSerifTC-Regular.otf');
+}
+
+html {
+    box-sizing: border-box; /*預設是cotent-box*/
+}
+
+#background1 {
+    background-color: #BAA292;
+}
+
+#background2 {
+    background-color: #9F8A7D;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 100%; /*16px，寫一下比較安心*/
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100vh; /*縮放時頁面最小會維持滿版*/
+}
+
+.header {
+    background-color: #332B26;
+}
+
+.header-home {
+    
+}
+
+.header-home-icon {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 63px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center; /*置中效果*/
+}
+
+.main-progress {
+    opacity: 0; /*淡入用*/
+
+    display: block;
+    
+    width: 100vw; /*滿版的寬度*/
+    max-width: 100%; /*避免下述的滿版範圍超出整個容器*/
+
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+        
+    /*置中效果*/
+    max-width: 1280px;
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-bottom: 66px;
+}
+
+.main-content-scene {
+    opacity: 0; /*淡入用*/
+
+    margin-right: 7%;
+    position: relative;
+}
+
+.main-content-scene-image {
+
+}
+
+/*動畫差分起點*/
+/*第一題*/
+.main-content-scene-shadow {
+    position: absolute;
+    left: 0;
+}
+
+.main-content-scene-card {
+    position: absolute;
+    left: 0;
+}
+
+/*第二題*/
+.main-content-scene-sled {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+
+.main-content-scene-star1 {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+
+.main-content-scene-star2 {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+
+.main-content-scene-light { /*第二題、第三題和第四題都有*/
+    opacity: 0; /*(離場前)淡入用*/
+    position: absolute;
+    left: 0;
+}
+
+/*第三題*/
+.main-content-scene-vase {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+.main-content-scene-food1 {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+.main-content-scene-food2 {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+.main-content-scene-food3 {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+.main-content-scene-food4 {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+
+/*第四題*/
+.main-content-scene-singer {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+.main-content-scene-people1 {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+.main-content-scene-people2 {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+
+/*第五題*/
+.main-content-scene-gift {
+    opacity: 0; /*淡入用*/
+    position: absolute;
+    left: 0;
+}
+/*動畫差分終點*/
+
+.main-content-word {
+    opacity: 0; /*淡入用*/
+    display: flex;
+    flex-direction: column;
+}
+
+.topic {
+    font-family: 'Source Han Serif TC', serif;
+    color: #4D433C;
+    font-size: 1.75em; /*28px*/
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+
+.option{
+    
+}
+
+.option-button {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px; /*按鈕間距*/
+    
+    cursor: pointer;
+}
+
+.option-button-link {
+    text-decoration: none;
+    text-align: center;
+
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 1.5625em; /*25px*/
+    background-color: #4D433C;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    border: 1px solid #4D433C;
+    border-radius: 50px;
+    color: #FFF4ED;
+}
+
+.btn1:hover {
+    background-color: #5D756B;
+    border: 1px solid #5D756B;
+    border-radius: 50px;
+    color: white;
+}
+
+.btn2:hover {
+    background-color: #A7A7A7;
+    border: 1px solid #A7A7A7;
+    border-radius: 50px;
+    color: #1A1A1A;
+}
+
+.btn3:hover {
+    background-color: #77514A;
+    border: 1px solid #77514A;
+    border-radius: 50px;
+    color: white;
+}
+
+.btn4:hover {
+    background-color: #B9A672;
+    border: 1px solid #B9A672;
+    border-radius: 50px;
+    color: #1A1A1A;
+}
+
+.btn5:hover {
+    background-color: #938479;
+    border: 1px solid #938479;
+    border-radius: 50px;
+    color: white;
+}
+
+/*按鈕點擊特效之起點*/
+.option-button-dot { /*點點的軌道設置*/
+    position: absolute; /*基準設在同一層的按鈕(連結)上*/
+    display: block;
+    
+    /*避免佔據太大範圍*/
+    width: 1px;
+    height: 1px;
+    
+    transform-origin: 5px 5px;
+    pointer-events: none; /*避免因滑鼠滑過等原因觸發不必要的事件*/
+}
+
+.option-button .option-button-dot:nth-child(1) { /*八個點點的軌道方向*/
+    top: 50%;
+    left: 100%;
+    transform: translate3d(-10px, -5px, 0);
+}
+
+.option-button .option-button-dot:nth-child(2) {
+    bottom: 0;
+    left: 100%;
+    transform: translate3d(-10px, 0, 0) rotate(45deg);
+}
+
+.option-button .option-button-dot:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-5px, 0, 0) rotate(90deg);
+}
+
+.option-button .option-button-dot:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    transform: rotate(135deg);
+}
+
+.option-button .option-button-dot:nth-child(5) {
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -5px, 0) rotate(180deg);
+}
+
+.option-button .option-button-dot:nth-child(6) {
+    top: 0;
+    left: 0;
+    transform: rotate(225deg);
+}
+
+.option-button .option-button-dot:nth-child(7) {
+    top: 0;
+    left: 50%;
+    transform: translate3d(-5px, 0, 0) rotate(270deg);
+}
+
+.option-button .option-button-dot:nth-child(8) {
+    top: 0;
+    left: 100%;
+    transform: translate3d(-10px, 0, 0) rotate(315deg);
+}
+
+.dot1:before {
+    background-color: #5D756B;
+}
+
+.dot2:before {
+    background-color: #A7A7A7;
+}
+
+.dot3:before {
+    background-color: #77514A;
+}
+
+.dot4:before {
+    background-color: #B9A672;
+}
+
+.dot5:before {
+    background-color: #938479;
+}
+
+.option-button .option-button-dot:before { /*點點本身的樣式設定*/
+    content: "";
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    
+    offset-path: path("M0 1c7.1 0 10.7 2 14.3 4s7.1 4 14.3 4 10.7-2 14.3-4 7.2-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4");
+    offset-distance: 25%;
+    pointer-events: none;
+    opacity: 0;
+    transition: offset-distance 300ms, opacity 600ms; /*中間是發射速度*/
+}
+
+.option-button:active .option-button-dot:before {
+    offset-distance: 0;
+    opacity: 1;
+    transition: offset-distance 0ms, opacity 0ms;
+}
+/*按鈕點擊特效之終點*/
+
+.footer {
+    background-color: #332B26;
+    width: 100%; /*與父元件(相當於網頁本身)寬度相同*/
+}
+
+.footer-logo {
+    margin-top: 30px;
+    margin-bottom: 16px;
+    
+    /*使logo的圖片與文字置中*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo-image {
+    
+}
+
+.footer-logo-word {
+    font-family: 'Kranky', serif;
+    font-size: 1.5em; /*24px*/
+    color: white;
+    margin: 0; /*清除<p>的預設格式*/
+}
+
+
+
+/*RWD設定之桌機first*/
+@media (max-width: 1200px){ /*筆電格式*/
+    .topic {
+        font-size: 1.5em; 
+    }
+    .option-button-link {
+        font-size: 1.3em;
+    }
+    .option-button .option-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 35%;
+    }
+}
+
+@media (max-width: 992px) { /*介於筆電和平板中間*/
+    .header-home-icon {
+        margin-left: 53px;
+    }
+    .main-content {
+        align-items: center;
+    }
+
+    .main-content-scene-image {
+        width: 400px;
+        height: 560px;
+    }
+    /*情境圖差分起點*/
+    .main-content-scene-shadow {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-card {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-sled {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-star1 {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-star2 {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-light {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-vase {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-food1 {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-food2 {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-food3 {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-food4 {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-singer {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-people1 {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-people2 {
+        width: 400px;
+        height: 560px;
+    }
+    .main-content-scene-gift {
+        width: 400px;
+        height: 560px;
+    }
+     /*情境圖差分終點*/
+    .topic {
+        font-size: 1.5em; 
+    }
+    .option-button {
+        margin-top: 15px;
+    }
+    .option-button-link {
+        font-size: 1.3em;
+    }
+    .option-button .option-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 27%;
+    }
+}
+
+@media (max-width: 780px){ /*平板格式*/
+    .header-home-icon {
+        margin-left: 43px;
+    }
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .main-content-scene {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .option-button .option-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 20%;
+    }
+}
+
+@media (max-width: 576px){ /*手機格式*/
+    .header-home-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .header-home-icon {
+        margin-left: 33px;
+    }
+    .main-content-scene-image {
+        width: 300px;
+        height: 420px;
+    }
+    /*情境圖差分起點*/
+    .main-content-scene-shadow {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-card {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-sled {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-star1 {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-star2 {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-light {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-vase {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-food1 {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-food2 {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-food3 {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-food4 {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-singer {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-people1 {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-people2 {
+        width: 300px;
+        height: 420px;
+    }
+    .main-content-scene-gift {
+        width: 300px;
+        height: 420px;
+    }
+     /*情境圖差分終點*/
+    .main-content-word {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .topic {
+        font-size: 1.4em; 
+    }
+    .option-button-link {
+        font-size: 1.2em;
+    }
+    .option-button .option-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 20%;
+    }
+    .footer-logo {
+        margin-top: 26px;
+    }
+}
+
+@media (max-width: 400px){ /*更小的手機格式*/
+    .header-home-icon {
+        margin-left: 23px;
+    }
+    .main-content-scene-image {
+        width: 250px;
+        height: 350px;
+    }
+    /*情境圖差分起點*/
+    .main-content-scene-shadow {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-card {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-sled {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-star1 {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-star2 {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-light {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-vase {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-food1 {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-food2 {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-food3 {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-food4 {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-singer {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-people1 {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-people2 {
+        width: 250px;
+        height: 350px;
+    }
+    .main-content-scene-gift {
+        width: 250px;
+        height: 350px;
+    }
+     /*情境圖差分終點*/
+    .main-content-word {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .topic {
+        font-size: 1.2em; 
+    }
+    .option-button-link {
+        font-size: 1em;
+    }
+    .option-button .option-button-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 15%;
+    }
+    .footer-logo-image {
+        width: 40px;
+        height: 40px;
+    }
+    .footer-logo-word {
+        font-size: 1.25em; /*20px*/
+    }
+}
