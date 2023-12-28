@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>角色圖鑑</title>
+        <!--RWD設定-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--CSS引入區-->
+        <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+        <link href="css/style_character.css" rel="stylesheet"><!--如果其他題的格式都一樣，其實可以引入同個css-->
+        <!--字體引入區(Kranky)--><!--思源宋體的引入寫在CSS-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
+        <!--js與jQuery引入區-->
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="js/script_character.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                <a class="header-home" href="index.html">
+                    <img class="header-home-icon" src="images/home_icon_normal.png" alt="homepage">
+                </a>
+                <a class="header-back">
+                    <img class="header-back-icon" src="images/back_icon_normal.png" alt="lastpage">
+                </a>
+            </header>
+
+            <article class="main">
+                <div class="main-title">
+                    <img class="main-title-line" src="images/character_line.png" alt="左邊的線">
+                    <div class="main-title-words">
+                        <span class="main-title-word">角</span>
+                        <span class="main-title-word">色</span>
+                        <span class="main-title-word">圖</span>
+                        <span class="main-title-word">鑑</span>
+                    </div>
+                    <img class="main-title-line" src="images/character_line.png" alt="右邊的線">
+                </div>
+                <p class="main-subtitle">＜＜滑鼠移到該角色即會顯示相關介紹＞＞</p>
+                <div class="main-chara">
+                    <div class="main-chara-infor">
+                        <img class="main-chara-infor-image chara1" src="images/snowman.png" alt="雪人">
+                        <div class="main-chara-infor-content infor1">
+                            <img class="content-background" src="images/chara_background.png" alt="介紹背景">
+                            <div class="content-explain">
+                                <p class="content-explain-topic">【雪人】</p>
+                                <p class="content-explain-word">你來自北方遙遠的雪國，帶著一絲好奇心參加了這場茶會，長年待在冰天雪地的環境使你不太習慣這場熱絡的聚會，選擇當個透明人默默在一旁享用茶點觀察大家。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-chara-infor">
+                        <img class="main-chara-infor-image chara2" src="images/santaClaus.png" alt="聖誕老公公">
+                        <div class="main-chara-infor-content infor2">
+                            <img class="content-background" src="images/chara_background.png" alt="介紹背景">
+                            <div class="content-explain">
+                                <p class="content-explain-topic">【聖誕老公公】</p>
+                            <p class="content-explain-word">你的個性慷慨大方、樂於分享，喜歡召集朋友齊聚一堂。而且擁有強大的領導氣質和社交能力，經常毛遂自薦當領頭羊</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-chara-infor">
+                        <img class="main-chara-infor-image chara3" src="images/reindeer.png" alt="馴鹿">
+                        <div class="main-chara-infor-content infor3">
+                            <img class="content-background" src="images/chara_background.png" alt="介紹背景">
+                            <div class="content-explain">
+                                <p class="content-explain-topic">【馴鹿】</p>
+                            <p class="content-explain-word">你是一個務實、有準則的人，茶會上的點心與飲品甚至是餐桌桌巾，各個都是你精挑細選的。你習慣鉅細靡遺地規畫好每件事，是聖誕老公公的得力助手！</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-chara-infor">
+                        <img class="main-chara-infor-image chara4" src="images/wreath.png" alt="聖誕花圈">
+                        <div class="main-chara-infor-content infor4">
+                            <img class="content-background" src="images/chara_background.png" alt="介紹背景">
+                            <div class="content-explain">
+                                <p class="content-explain-topic">【聖誕花圈】</p>
+                            <p class="content-explain-word">你是浪漫的代名詞，擁有豐富的感受與獨特的想法，喜歡追求美好的事物，行事風格不拘，不時會陷入自己內心的小世界。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-chara-infor">
+                        <img class="main-chara-infor-image chara5" src="images/tree.png" alt="聖誕樹">
+                        <div class="main-chara-infor-content infor5">
+                            <img class="content-background" src="images/chara_background.png" alt="介紹背景">
+                            <div class="content-explain">
+                                <p class="content-explain-topic">【聖誕樹】</p>
+                            <p class="content-explain-word">頭頂上放著一顆星星，身上戴著五顏六色的裝飾物，你是茶會中最blingbling的存在！任誰都抵擋不住你的魅力，難以將目光移開</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <footer class="footer">
+                    <div class="footer-logo">
+                        <img class="footer-logo-image" src="images/logo.png" alt="logo">
+                        <p class="footer-logo-word">J&J Lab.</p>
+                    </div>
+                    <div class="footer-infor">
+                        <a class="footer-infor-about underline" href="#">About us</a>
+                        <img class="footer-infor-line" src="images/footer_line.png" alt="區隔用直線">
+                        <div class="footer-infor-sns">
+                            <a class="footer-infor-sns-link" href="#">
+                                <img class="footer-infor-sns-link-image" id="fb" src="images/facebook_normal.png" alt="fb">
+                            </a>
+                            <a class="footer-infor-sns-link" href="#">
+                                <img class="footer-infor-sns-link-image" id="ig" src="images/instagram_normal.png" alt="ig">
+                            </a>
+                            <a class="footer-infor-sns-link" href="#">
+                                <img class="footer-infor-sns-link-image" id="x" src="images/twitter_normal.png" alt="x">
+                            </a>
+                        </div>
+                    </div>
+                    <p class="footer-copyright">Copyright&copy;2023 J&J Lab.All rights reserved.</p>
+                </footer>
+        </div>
+    </body>
+</html>
