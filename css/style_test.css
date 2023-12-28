@@ -379,7 +379,7 @@ body {
 
 .footer-logo-word {
     font-family: 'Kranky', serif;
-    font-size: 1.25em; /*20px*/
+    font-size: 1.5em; /*24px*/
     color: white;
     margin: 0; /*清除<p>的預設格式*/
 }
@@ -398,6 +398,7 @@ body {
         offset-distance: 35%;
     }
 }
+
 @media (max-width: 992px) { /*介於筆電和平板中間*/
     .header-home-icon {
         margin-left: 53px;
@@ -485,6 +486,7 @@ body {
         offset-distance: 27%;
     }
 }
+
 @media (max-width: 780px){ /*平板格式*/
     .header-home-icon {
         margin-left: 43px;
@@ -503,7 +505,12 @@ body {
         offset-distance: 20%;
     }
 }
+
 @media (max-width: 576px){ /*手機格式*/
+    .header-home-icon {
+        width: 50px;
+        height: 50px;
+    }
     .header-home-icon {
         margin-left: 33px;
     }
@@ -585,6 +592,9 @@ body {
     }
     .option-button .option-button-dot:before { /*點點本身的樣式設定*/
         offset-distance: 20%;
+    }
+    .footer-logo {
+        margin-top: 26px;
     }
 }
 
@@ -670,5 +680,12 @@ body {
     }
     .option-button .option-button-dot:before { /*點點本身的樣式設定*/
         offset-distance: 15%;
+    }
+    .footer-logo-image {
+        width: 40px;
+        height: 40px;
+    }
+    .footer-logo-word {
+        font-size: 1.25em; /*20px*/
     }
 }

@@ -21,177 +21,573 @@ body {
     display: flex;
     flex-direction: column;
 
-    height: 100vh; /*滿版的高度*/
-
-    min-width: 1080px; /*畫面縮小後東西比較不會擠在一起*/
-}
-
-.header {
-    text-align: center;
-}
-
-.header-title {
-    font-family: "Noto Sans TC", sans-serif;
-    font-size: 3em; /*48px*/
-    letter-spacing: 0.45em; /*7.2px*/
-    color: white;
-
-    padding: 39px 0;
-    /*margin-left: 7.2px; /*對齊用*/
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-#header1 {
-    background-color: #4B4A4A;
-}
-
-#header2 {
-    background-color: #41524B;
-}
-
-#header3 {
-    background-color: #4D433C;
-}
-
-#header4 {
-    background-color: #685C3A;
-}
-
-#header5 {
-    background-color: #60423C;
-}
-
-.middle { /*主內容+按鈕*/
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-     
-    /*置中效果*/
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+    height: 100vh; /*縮放時頁面最小會維持滿版*/
 }
 
 .main {
-    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center; /*置中效果*/
+}
+
+.main-title {
+    opacity: 0; /*淡入用*/
+
+    margin-top: 140px;
+}
+
+.main-title-word {
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 3em; /*48px*/
+    font-weight: 500;
+    background-color: #E0E0E0;
+    padding: 15px 25px 18px 25px;
+    margin: -2px;
+    border: 1px solid #E0E0E0;
+    border-radius: 50%;
+    color: #2C231D;
+    box-shadow: 5px 5px 3px #6B635E;
+}
+
+.main-subtitle {
+    opacity: 0; /*淡入用*/
 
     display: flex;
     justify-content: center;
-
-    margin-top: 99px;
-    margin-bottom: 121px;
-
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 45px;
 }
 
-.main-image {
-    display: block;
-    margin-right: 75px;
+.main-subtitle-line {
+    position: relative;
+    width: 915px;
 }
 
-.main-content {
+.main-subtitle-word {
+    position: absolute;
+
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 1.9em;
+    color: #FFFFFF;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-bottom: 3px; /*對齊用*/
+    background-color: #837871;
+}
+
+.main-card {
+    opacity: 0; /*淡入用*/
+
+    background-color: #D9D9D9;
+    padding: 55px 86px 55px 54px;
+    border: 1px solid #D9D9D9;
+    border-radius: 65px;
+    box-shadow: 3px 4px 8px #36251B;
+    
+    width: 915px;
+
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
-.main-content-result {
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 2em; /*32px*/
-    line-height: 1.5;
-    text-align: center;
-    color: #4D433C;
-    font-weight: 700;
-
-    margin-top: 0;
-    margin-bottom: 0;
+.main-card-image {
+    margin-right: 26px;
 }
 
-.main-content-bless {
+.main-card-content {
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 1.9em;
+    line-height: 1.25;
+    color: #1B140F;
+
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.main-content-bless-word {
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1.5em; /*324px*/
-    color: #67382D;
-    font-weight: 700;
-
-    margin-top: 0;
-    margin-bottom: 0;
+.main-card-content-topic {
+    font-weight: 500;
+    margin: 0 0 18px 0;
 }
 
-.main-content-bless-image {
-    display: block;
-    margin-left: 4px;
-}
-
-.button {
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 2em; /*32px*/
-}
-
-.button-content {
+.main-card-content-word {
     margin: 0;
 }
 
-.button-content-link {
-    text-decoration: none;
-    color: white;
-    padding: 18px 88px 22px 88px; /*top為對齊用*/
+.main-bless {
+    opacity: 0; /*淡入用*/
+
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #44231D;
+    margin: 18px 0 27px 0;
 }
 
-.button-content-link:hover {
-    color: #1a1a1a;
-    background-color: #BAA292;
-    border: 1px solid #BAA292;
+.main-buttons {
+    opacity: 0; /*淡入用*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-buttons-link { /*hover和傳送頁面的功能預計寫在js裡*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 22.5px;
+    margin-right: 22.5px;
+
+    text-decoration: none;
+}
+
+.main-buttons-link-image {
+    margin-left: 4px; /*對齊用*/
+    cursor: pointer;
+}
+
+.main-buttons-link-word {
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 1.25em;
+    color: #E1E1E1;
+    margin: 0;
+    cursor: default;
+}
+
+.main-homebutton {
+    opacity: 0; /*淡入用*/
+    margin: 52px 0 74px 0;
+
+    position: relative;
+}
+
+.main-homebutton-link {
+    font-family: 'Source Han Serif TC', serif; /*備用的字體不需用引號括起來*/
+    font-size: 2em; /*32px*/
+
+    text-decoration: none;
+    color: #44231D;
+    padding: 22px 88px 24px 80px; /*因為需要對齊所以上下、左右的值不同*/
+    background-color: #E0E0E0;
+    border: 1px solid #E0E0E0;
     border-radius: 50px;
 }
 
-.btn1 {
+.btn1:hover {
+    color: #E7E7E7;
     background-color: #4B4A4A;
     border: 1px solid #4B4A4A;
     border-radius: 50px;
 }
 
-.btn2 {
+.btn2:hover {
+    color: #E7E7E7;
     background-color: #41524B;
     border: 1px solid #41524B;
     border-radius: 50px;
 }
 
-.btn3 {
+.btn3:hover {
+    color: #E7E7E7;
     background-color: #4D433C;
     border: 1px solid #4D433C;
     border-radius: 50px;
 }
 
-.btn4 {
+.btn4:hover {
+    color: #E7E7E7;
     background-color: #685C3A;
     border: 1px solid #685C3A;
     border-radius: 50px;
 }
 
-.btn5 {
+.btn5:hover {
+    color: #E7E7E7;
     background-color: #60423C;
     border: 1px solid #60423C;
     border-radius: 50px;
 }
 
+/*按鈕點擊特效之起點*/
+.main-homebutton-dot { /*點點的軌道設置*/
+    position: absolute; /*基準設在按鈕(連結)上*/
+    z-index: 0;
+    display: block;
+    
+    /*避免超出圖片範圍*/
+    width: 1px;
+    height: 1px;
+    
+    transform-origin: 5px 5px;
+    pointer-events: none;
+}
+
+.main-homebutton .main-homebutton-dot:nth-child(1) { /*八個點點的軌道方向*/
+    top: 50%;
+    left: 100%;
+    transform: translate3d(-10px, -5px, 0);
+}
+
+.main-homebutton .main-homebutton-dot:nth-child(2) {
+    bottom: 0;
+    left: 100%;
+    transform: translate3d(-10px, 0, 0) rotate(45deg);
+}
+
+.main-homebutton .main-homebutton-dot:nth-child(3) {
+    bottom: 0;
+    left: 50%;
+    transform: translate3d(-5px, 0, 0) rotate(90deg);
+}
+
+.main-homebutton .main-homebutton-dot:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    transform: rotate(135deg);
+}
+
+.main-homebutton .main-homebutton-dot:nth-child(5) {
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -5px, 0) rotate(180deg);
+}
+
+.main-homebutton .main-homebutton-dot:nth-child(6) {
+    top: 0;
+    left: 0;
+    transform: rotate(225deg);
+}
+
+.main-homebutton .main-homebutton-dot:nth-child(7) {
+    top: 0;
+    left: 50%;
+    transform: translate3d(-5px, 0, 0) rotate(270deg);
+}
+
+.main-homebutton .main-homebutton-dot:nth-child(8) {
+    top: 0;
+    left: 100%;
+    transform: translate3d(-10px, 0, 0) rotate(315deg);
+}
+
+.dot1:before {
+    background-color: #4B4A4A;
+}
+
+.dot2:before {
+    background-color: #A7A7A7;
+}
+
+.dot3:before {
+    background-color: #77514A;
+}
+
+.dot4:before {
+    background-color: #B9A672;
+}
+
+.dot5:before {
+    background-color: #938479;
+}
+
+.main-homebutton .main-homebutton-dot:before { /*點點本身的樣式設定*/
+    content: "";
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    
+    offset-path: path("M0 1c7.1 0 10.7 2 14.3 4s7.1 4 14.3 4 10.7-2 14.3-4 7.2-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4 10.7-2 14.3-4 7.1-4 14.3-4 10.7 2 14.3 4 7.1 4 14.3 4");
+    offset-distance: 50%;
+    pointer-events: none;
+    opacity: 0;
+    transition: offset-distance 300ms, opacity 600ms; /*中間是發射速度*/
+}
+
+.main-homebutton:active .main-homebutton-dot:before {
+    offset-distance: 0;
+    opacity: 1;
+    transition: offset-distance 0ms, opacity 0ms;
+}
+/*按鈕點擊特效之終點*/
+
 .footer {
-    background-color: black; /*暫定*/
+    background-color: #332B26;
+    width: 100%; /*與父元件(相當於網頁本身)寬度相同*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    margin-top: 30px;
+    margin-bottom: 16px;
+    
+    /*使logo的圖片與文字置中*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo-image {
+    
+}
+
+.footer-logo-word {
+    font-family: 'Kranky', serif;
+    font-size: 1.5em; /*24px*/
+    color: white;
+    margin: 0; /*清除<p>的預設格式*/
+}
+
+.footer-infor {
     display: flex;
     justify-content: center;
-
-    margin-top: 107px;
+    align-items: center;
 }
 
-.footer-content {
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 1em;
-    color: #d9d9d9; /*暫定*/
-    margin: 21px 0;
+.footer-infor-about {
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+    margin: 0; /*清除<p>的預設格式*/
+    margin-bottom: 4px;
+
+    position: relative;
 }
+
+.underline {
+
+}
+
+.footer-infor-about.underline::before{
+    content:"";
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: -15%;
+    height: 1px;
+    background-color: white;
+    transition: all .3s ease-in-out;
+ }
+
+ .footer-infor-about.underline:hover::before{
+    right: 0;
+    left: 0;
+ }
+
+ .footer-infor-about:active {
+    color: #837871;
+ }
+
+ .underline:active::before {
+    background-color: #837871;
+    transition: none;
+ }
+
+ .footer-infor-line {
+    height: 30px;
+    margin-left: 12px;
+    margin-right: 10.5px;
+ }
+
+.footer-infor-sns {
+    
+}
+
+.footer-infor-sns-link {
+    text-decoration: none;
+}
+
+.footer-infor-sns-link-image {
+    margin-left: 1.5px;
+    margin-right: 1.5px;
+}
+
+.footer-copyright {
+    font-family: 'Source Han Serif TC', serif;
+    font-size: 1.2em;
+    color: #E5DFDF;
+    margin: 8px 0 27px 0; /*清除<p>的預設格式*/
+}
+
+
+/*RWD設定之桌機first*/
+@media (max-width: 1200px){ /*筆電格式*/
+    .main-title-word {
+        font-size: 2.7em;
+        padding: 12px 22px 15px 22px;
+    }
+    .main-subtitle-line {
+        width: 800px;
+    }
+    .main-subtitle-word {
+        font-size: 1.6em;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .main-card {
+        width: 800px;
+    }
+    .main-card-content {
+        font-size: 1.7em;
+    }
+    .main-homebutton-link {
+        font-size: 1.7em;
+        padding: 18px 84px 20px 76px; /*因為需要對齊所以上下、左右的值不同*/
+    }
+    .main-homebutton .main-homebutton-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 45%;
+    }
+}
+
+@media (max-width: 992px) { /*介於筆電和平板中間*/
+    .main-subtitle-line {
+        width: 650px;
+    }
+    .main-card {
+        width: 650px;
+        padding: 50px 81px 50px 49px;
+    }
+    .main-card-image {
+        width: 250px;
+        height: 250px;
+    }
+    .main-card-content {
+        font-size: 1.5em;
+    }
+    .main-bless {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 780px){ /*平板格式*/
+    .main-subtitle-line {
+        width: 500px;
+    }
+    .main-card {
+        width: 500px;
+        flex-direction: column;
+        padding: 55px;
+    }
+    .main-card-image {
+        width: 200px;
+        height: 200px;
+        margin-left: 30px;
+        margin-bottom: 25px;
+    }
+    .main-homebutton .main-homebutton-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 40%;
+    }
+}
+
+@media (max-width: 576px){ /*手機格式*/
+    .main-title-word {
+        font-size: 2.5em;
+        padding: 10px 20px 13px 20px;
+    }
+    .main-subtitle-line {
+        width: 360px;
+    }
+    .main-subtitle-word {
+        font-size: 1.4em;
+    }
+    .main-card {
+        width: 360px;
+    }
+    .main-card-content {
+        font-size: 1.3em;
+    }
+    .main-card-content-word {
+        margin-left: 7px; /*對齊用*/
+    }
+    .main-bless {
+        font-size: 1.1em;
+    }
+    .main-buttons-link-image {
+        width: 60px;
+        height: 60px; 
+    }
+    .main-buttons-link-word {
+        font-size: 1em;
+    }
+    .main-homebutton-link {
+        font-size: 1.55em;
+        padding: 16.5px 79.5px 16.5px 72.5px; /*因為需要對齊所以上下、左右的值不同*/
+    }
+    .main-homebutton .main-homebutton-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 25%;
+    }
+    .footer-logo {
+        margin-top: 26px;
+    }
+    .footer-copyright {
+        font-size: 1em;
+    }
+
+}
+
+@media (max-width: 400px){ /*更小的手機格式*/
+    .main-title-word {
+        font-size: 2em;
+        padding: 8px 18px 11px 18px;
+    }
+    .main-subtitle-line {
+        width: 300px;
+    }
+    .main-subtitle-word {
+        font-size: 1.3em;
+    }
+    .main-card {
+        width: 300px;
+    }
+    .main-card-image {
+        width: 180px;
+        height: 180px;
+    }
+    .main-card-content {
+        font-size: 1.2em;
+    }
+    .main-buttons-link-image {
+        width: 60px;
+        height: 60px; 
+    }
+    .main-homebutton-link {
+        font-size: 1.4em;
+        padding: 15px 75px 15px 67px; /*因為需要對齊所以上下、左右的值不同*/
+    }
+    .main-homebutton .main-homebutton-dot:before { /*點點本身的樣式設定*/
+        offset-distance: 20%;
+    }
+    .footer-logo-image {
+        width: 40px;
+        height: 40px;
+    }
+    .footer-logo-word {
+        font-size: 1.25em; /*20px*/
+    }
+    .footer-infor-about {
+        font-size: 1em;
+    }
+    .footer-infor-line {
+        height: 25px;
+    }
+    .footer-infor-sns-link-image {
+        width: 30px;
+        height: 30px;
+    }
+}
+
