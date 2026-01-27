@@ -59,24 +59,20 @@ $(document).ready(function() {
     }
 
     function leaveHere(){
-        //播放離開特效：禮物晃一下後再依序淡出
-        setTimeout(function() {
-            let gift = document.querySelector(".main-content-scene-gift");
-            gift.classList.add("animate__bounceOut");
-        }, 500);
+        //播放離開特效：依序淡出
         setTimeout(function() {
             $(".main-content-word").fadeTo(1000, 0);
-        }, 1500);
+        }, 500);
         setTimeout(function() {
             $(".main-content-scene").fadeTo(1000, 0);
-        }, 2500);
+        }, 1000);
         setTimeout(function() {
             $(".main-progress").fadeTo(500, 0);
-        }, 3500);
+        }, 2000);
         //前往下一頁
         setTimeout(function() {
             window.location.href = "loading.html";
-        }, 4000);
+        }, 2500);
     }
 
     document.querySelector("#id1").addEventListener("click", function(){ addScoreAndClick("0"); leaveHere(); });

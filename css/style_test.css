@@ -40,9 +40,16 @@ body {
 }
 
 .header-home-icon {
+    font-size: 60px;
+    color: rgba(210, 194, 194, 255);
+
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 63px;
+}
+
+.header-home-icon:hover {
+    color: rgba(131, 120, 113, 255);
 }
 
 .main {

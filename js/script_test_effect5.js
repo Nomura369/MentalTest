@@ -40,16 +40,6 @@ $(document).ready(function() {
     window.addEventListener('scroll', function() {
         sceneAnimation();
     });
-    
-    //.header-home-icon的hover效果
-    //因為用css容易lag所以就搬來這裡了
-    let home = document.querySelector(".header-home-icon");
-    home.addEventListener("mouseenter", function(){
-        home.setAttribute("src", "images/home_icon_hover.png");
-    });
-    home.addEventListener("mouseout", function(){
-        home.setAttribute("src", "images/home_icon_normal.png");
-    });
 
     //淡出
     //跟計分的程式碼放一起

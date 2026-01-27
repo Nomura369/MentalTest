@@ -20,12 +20,12 @@ $(document).ready(function() {
         if(window.matchMedia("(max-width: 768px)").matches){
             if(window.scrollY >= 100 && whetherPlayed == false){
                 setTimeout(function() {
-                    light.classList.add("animate__animated");
-                    light.classList.add("animate__fadeIn");
-                }, 1000);
-                setTimeout(function() {
                     singer.classList.add("animate__animated");
                     singer.classList.add("animate__bounceIn");
+                }, 1000);
+                setTimeout(function() {
+                    light.classList.add("animate__animated");
+                    light.classList.add("animate__fadeIn");
                 }, 2000);
                 setTimeout(function() {
                     people1.classList.add("animate__animated");
@@ -41,12 +41,12 @@ $(document).ready(function() {
         }else {
             if(window.scrollY >= 250 && whetherPlayed == false){
                 setTimeout(function() {
-                    light.classList.add("animate__animated");
-                    light.classList.add("animate__fadeIn");
-                }, 1000);
-                setTimeout(function() {
                     singer.classList.add("animate__animated");
                     singer.classList.add("animate__bounceIn");
+                }, 1000);
+                setTimeout(function() {
+                    light.classList.add("animate__animated");
+                    light.classList.add("animate__fadeIn");
                 }, 2000);
                 setTimeout(function() {
                     people1.classList.add("animate__animated");
@@ -66,16 +66,6 @@ $(document).ready(function() {
     sceneAnimation();
     window.addEventListener('scroll', function() {
         sceneAnimation();
-    });
-    
-    //.header-home-icon的hover效果
-    //因為用css容易lag所以就搬來這裡了
-    let home = document.querySelector(".header-home-icon");
-    home.addEventListener("mouseenter", function(){
-        home.setAttribute("src", "images/home_icon_hover.png");
-    });
-    home.addEventListener("mouseout", function(){
-        home.setAttribute("src", "images/home_icon_normal.png");
     });
 
     //淡出
